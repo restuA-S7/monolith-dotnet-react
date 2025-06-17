@@ -1,0 +1,1044 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HotChocolate.AspNetCore</name>
+    </assembly>
+    <members>
+        <member name="T:HotChocolate.AspNetCore.ErrorHelper">
+            <summary>
+            An internal helper class that centralizes server errors.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Extensions.BananaCakePopEndpointConventionBuilder">
+            <summary>
+            Represents the endpoint convention builder for Banana Cake Pop.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Extensions.BananaCakePopEndpointConventionBuilder.Add(System.Action{Microsoft.AspNetCore.Builder.EndpointBuilder})">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder">
+            <summary>
+            Represents the endpoint convention builder for GraphQL.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder.Add(System.Action{Microsoft.AspNetCore.Builder.EndpointBuilder})">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Extensions.GraphQLHttpEndpointConventionBuilder">
+            <summary>
+            Represents the endpoint convention builder for GraphQL HTTP requests.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Extensions.GraphQLHttpEndpointConventionBuilder.Add(System.Action{Microsoft.AspNetCore.Builder.EndpointBuilder})">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLEndpointOptions.GraphQLEndpoint">
+            <summary>
+            Gets or sets the GraphQL endpoint.
+            If <see cref="P:HotChocolate.AspNetCore.GraphQLToolOptions.UseBrowserUrlAsGraphQLEndpoint"/> is
+            set to <c>true</c> the GraphQL endpoint must be a relative path;
+            otherwise, it must be an absolute URL.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.GraphQLHttpOptions">
+            <summary>
+            Represents the GraphQL HTTP options.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLHttpOptions.AllowedGetOperations">
+            <summary>
+            Gets or sets which GraphQL options are allowed on GET requests.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLHttpOptions.EnableGetRequests">
+            <summary>
+            Defines if GraphQL HTTP GET requests are allowed.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLHttpOptions.EnableMultipartRequests">
+            <summary>
+            Defines if GraphQL HTTP Multipart requests are allowed.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.GraphQLServerOptions">
+            <summary>
+            Represents the GraphQL server options.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLServerOptions.Tool">
+            <summary>
+            Gets the GraphQL tool options for Banana Cake Pop.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLServerOptions.AllowedGetOperations">
+            <summary>
+            Gets or sets which GraphQL options are allowed on GET requests.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLServerOptions.EnableGetRequests">
+            <summary>
+            Defines if GraphQL HTTP GET requests are allowed.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLServerOptions.EnableMultipartRequests">
+            <summary>
+            Defines if GraphQL HTTP Multipart requests are allowed.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLServerOptions.EnableSchemaRequests">
+            <summary>
+            Defines if the GraphQL schema SDL can be downloaded.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.GraphQLToolOptions">
+            <summary>
+            Represents the GraphQL tool options for Banana Cake Pop.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.Title">
+            <summary>
+            Gets or sets the website title.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.Document">
+            <summary>
+            Gets or sets the default document content.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.UseBrowserUrlAsGraphQLEndpoint">
+            <summary>
+            Defines that the schema endpoint URL shall be inferred from the browser URL.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.GraphQLEndpoint">
+            <summary>
+            Gets or sets the GraphQL endpoint.
+            If <see cref="P:HotChocolate.AspNetCore.GraphQLToolOptions.UseBrowserUrlAsGraphQLEndpoint"/> is set to <c>true</c> the
+            GraphQL endpoint must be a relative path; otherwise, it must be an absolute URL.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.IncludeCookies">
+            <summary>
+            Defines if cookies shall be included into the HTTP call to the GraphQL backend.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.HttpHeaders">
+            <summary>
+            Gets or sets the default http headers for Banana Cake Pop.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.HttpMethod">
+            <summary>
+            Gets or sets the default
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.Enable">
+            <summary>
+            Defines if Banana Cake Pop is enabled.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.GaTrackingId">
+            <summary>
+            Specifies the Google analytics tracking ID for Banana Cake Pop.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.GraphQLToolOptions.DisableTelemetry">
+            <summary>
+            Specifies if the application telemetry events are disabled.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Instrumentation.HttpRequestKind">
+            <summary>
+            Specifies the HTTP request kind that is being executed.
+            </summary>
+        </member>
+        <member name="F:HotChocolate.AspNetCore.Instrumentation.HttpRequestKind.HttpPost">
+            <summary>
+            HTTP POST GraphQL Request.
+            </summary>
+        </member>
+        <member name="F:HotChocolate.AspNetCore.Instrumentation.HttpRequestKind.HttpGet">
+            <summary>
+            HTTP GET GraphQL Request.
+            </summary>
+        </member>
+        <member name="F:HotChocolate.AspNetCore.Instrumentation.HttpRequestKind.HttpGetSchema">
+            <summary>
+            HTTP GET SDL request.
+            </summary>
+        </member>
+        <member name="F:HotChocolate.AspNetCore.Instrumentation.HttpRequestKind.HttpMultiPart">
+            <summary>
+            HTTP POST GraphQL MultiPart Request.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEventListener">
+            <summary>
+            Register an implementation of this interface in the DI container to
+            listen to transport diagnostic events. Multiple instances can be registered
+            and they will all be called in the registration order.
+            </summary>
+            <seealso cref="T:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener"/>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents">
+            <summary>
+            The diagnostic events of the GraphQL transport layer.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.ExecuteHttpRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.AspNetCore.Instrumentation.HttpRequestKind)">
+            <summary>
+            Called when starting to execute a GraphQL over HTTP request in the transport layer.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <param name="kind">
+            The HTTP request kind that is being executed.
+            </param>
+            <returns>
+            A scope that will be disposed when the execution has finished.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.StartSingleRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.Language.GraphQLRequest)">
+            <summary>
+            Called within the <see cref="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.ExecuteHttpRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.AspNetCore.Instrumentation.HttpRequestKind)"/> scope and signals
+            that a single GraphQL request will be executed.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <param name="request">
+            The parsed GraphQL request.
+            </param>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.StartBatchRequest(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.IReadOnlyList{HotChocolate.Language.GraphQLRequest})">
+            <summary>
+            Called within the <see cref="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.ExecuteHttpRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.AspNetCore.Instrumentation.HttpRequestKind)"/> scope and signals
+            that a GraphQL batch request will be executed.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <param name="batch">
+            A list of GraphQL requests that represents the batch.
+            </param>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.StartOperationBatchRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.Language.GraphQLRequest,System.Collections.Generic.IReadOnlyList{System.String})">
+            <summary>
+            Called within the <see cref="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.ExecuteHttpRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.AspNetCore.Instrumentation.HttpRequestKind)"/> scope and signals
+            that a GraphQL batch request will be executed.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <param name="request">
+            A GraphQL request with multiple operations in a single GraphQL document.
+            </param>
+            <param name="operations">
+            A list of operation names that represents the execution order of the
+            operations within the GraphQL document.
+            </param>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.HttpRequestError(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.IError)">
+            <summary>
+            Called within the <see cref="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.ExecuteHttpRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.AspNetCore.Instrumentation.HttpRequestKind)"/> scope and signals
+            that a error occurred while processing the GraphQL over HTTP request.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <param name="error">
+            The error.
+            </param>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.HttpRequestError(Microsoft.AspNetCore.Http.HttpContext,System.Exception)">
+            <summary>
+            Called within the <see cref="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.ExecuteHttpRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.AspNetCore.Instrumentation.HttpRequestKind)"/> scope and signals
+            that a error occurred while processing the GraphQL over HTTP request.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <param name="exception">
+            The <see cref="T:System.Exception"/>.
+            </param>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.ParseHttpRequest(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Called when starting to parse a GraphQL HTTP request.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <returns>
+            A scope that will be disposed when the parsing is completed.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.ParserErrors(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.IReadOnlyList{HotChocolate.IError})">
+            <summary>
+            Called within the <see cref="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.ParseHttpRequest(Microsoft.AspNetCore.Http.HttpContext)"/> scope and signals
+            that a error occurred while parsing the GraphQL request.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <param name="errors">
+            The errors.
+            </param>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.FormatHttpResponse(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.Execution.IQueryResult)">
+            <summary>
+            Called when starting to format a GraphQL query result.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <param name="result">
+            The query result.
+            </param>
+            <returns>
+            A scope that will be disposed when GraphQL query result is written to the response stream.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.WebSocketSession(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Called when starting to establish a GraphQL WebSocket session.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <returns>
+            A scope that will enclose the whole WebSocket session and is disposed when the
+            session is closed.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.WebSocketSessionError(Microsoft.AspNetCore.Http.HttpContext,System.Exception)">
+            <summary>
+            Called within the <see cref="M:HotChocolate.AspNetCore.Instrumentation.IServerDiagnosticEvents.WebSocketSession(Microsoft.AspNetCore.Http.HttpContext)"/> scope and signals
+            that a error occurred that terminated the session.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <param name="errors">
+            The <see cref="T:System.Exception"/>.
+            </param>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener">
+            <summary>
+            Inherit form this class if you want to receive server diagnostic events.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.EmptyScope">
+            <summary>
+            A no-op activity scope that can be returned from
+            event methods that are not interested in when the scope is disposed.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.ExecuteHttpRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.AspNetCore.Instrumentation.HttpRequestKind)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.StartSingleRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.Language.GraphQLRequest)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.StartBatchRequest(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.IReadOnlyList{HotChocolate.Language.GraphQLRequest})">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.StartOperationBatchRequest(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.Language.GraphQLRequest,System.Collections.Generic.IReadOnlyList{System.String})">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.HttpRequestError(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.IError)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.HttpRequestError(Microsoft.AspNetCore.Http.HttpContext,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.ParseHttpRequest(Microsoft.AspNetCore.Http.HttpContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.ParserErrors(Microsoft.AspNetCore.Http.HttpContext,System.Collections.Generic.IReadOnlyList{HotChocolate.IError})">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.FormatHttpResponse(Microsoft.AspNetCore.Http.HttpContext,HotChocolate.Execution.IQueryResult)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.WebSocketSession(Microsoft.AspNetCore.Http.HttpContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Instrumentation.ServerDiagnosticEventListener.WebSocketSessionError(Microsoft.AspNetCore.Http.HttpContext,System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.AspNetCore.MiddlewareBase">
+            <summary>
+            The Hot Chocolate ASP.NET core middleware base class.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.MiddlewareBase.SchemaName">
+            <summary>
+            Gets the name of the schema that this middleware serves up.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.MiddlewareBase.IsDefaultSchema">
+            <summary>
+            Specifies if this middleware handles the default schema.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.MiddlewareBase.ExecutorProxy">
+            <summary>
+            Gets the request executor proxy.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.MiddlewareBase.NextAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invokes the next middleware in line.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.MiddlewareBase.GetExecutorAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets the request executor for this middleware.
+            </summary>
+            <param name="cancellationToken">
+            The cancellation token.
+            </param>
+            <returns>
+            Returns the request executor for this middleware.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.MiddlewareBase.GetSchemaAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets the schema for this middleware.
+            </summary>
+            <param name="cancellationToken">
+            The cancellation token.
+            </param>
+            <returns>
+            Returns the schema for this middleware.
+            </returns>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.MiddlewareRoutingType">
+            <summary>
+            Defines if middlewares are explicitly hosted through routing or of they are all
+            included into one route.
+            </summary>
+        </member>
+        <member name="F:HotChocolate.AspNetCore.MiddlewareRoutingType.Integrated">
+            <summary>
+            Integrated into one route e.g. MapGraphQL()
+            </summary>
+        </member>
+        <member name="F:HotChocolate.AspNetCore.MiddlewareRoutingType.Explicit">
+            <summary>
+            Explicitly hosted e.g. MapGraphQLSchema()
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Serialization.DefaultHttpResultSerializer.#ctor(HotChocolate.AspNetCore.Serialization.HttpResultSerialization,HotChocolate.AspNetCore.Serialization.HttpResultSerialization,System.Boolean,System.Text.Encodings.Web.JavaScriptEncoder)">
+            <summary>
+            Creates a new instance of <see cref="T:HotChocolate.AspNetCore.Serialization.DefaultHttpResultSerializer" />.
+            </summary>
+            <param name="batchSerialization">
+            Specifies the output-format for batched queries.
+            </param>
+            <param name="deferSerialization">
+            Specifies the output-format for deferred queries.
+            </param>
+            <param name="indented">
+            Defines whether the underlying <see cref="T:System.Text.Json.Utf8JsonWriter"/>
+            should pretty print the JSON which includes:
+            indenting nested JSON tokens, adding new lines, and adding
+            white space between property names and values.
+            By default, the JSON is written without extra white spaces.
+            </param>
+            <param name="encoder">
+            Gets or sets the encoder to use when escaping strings, or null to use the default encoder.
+            </param>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Serialization.IHttpRequestParser">
+            <summary>
+            A helper to parse GraphQL HTTP requests.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Serialization.IHttpRequestParser.ReadJsonRequestAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Parses a JSON GraphQL request from the request body.
+            </summary>
+            <param name="requestBody">
+            A stream representing the HTTP request body.
+            </param>
+            <param name="cancellationToken">
+            The request cancellation token.
+            </param>
+            <returns>
+            Returns the parsed GraphQL request.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Serialization.IHttpRequestParser.ReadParamsRequest(Microsoft.AspNetCore.Http.IQueryCollection)">
+            <summary>
+            Parses a GraphQL HTTP GET request from the HTTP query parameters.
+            </summary>
+            <param name="parameters">
+            The HTTP query parameter collection.
+            </param>
+            <returns>
+            Returns the parsed GraphQL request.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Serialization.IHttpRequestParser.ReadOperationsRequest(System.String)">
+            <summary>
+            Parses the operations string from an GraphQL HTTP MultiPart request.
+            </summary>
+            <param name="operations">
+            The operations string.
+            </param>
+            <returns>
+            Returns the parsed GraphQL request.
+            </returns>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Serialization.IHttpResultSerializer">
+            <summary>
+            This interface specifies how a GraphQL result is serialized to a HTTP response.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Serialization.IHttpResultSerializer.GetContentType(HotChocolate.Execution.IExecutionResult)">
+            <summary>
+            Gets the HTTP content type for the specified execution result.
+            </summary>
+            <param name="result">
+            The GraphQL execution result.
+            </param>
+            <returns>
+            Returns a string representing the content type,
+            eg. "application/json; charset=utf-8".
+            </returns>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Serialization.IHttpResultSerializer.GetStatusCode(HotChocolate.Execution.IExecutionResult)">
+            <summary>
+            Gets the HTTP status code for the specified execution result.
+            </summary>
+            <param name="result">
+            The GraphQL execution result.
+            </param>
+            <returns>
+            Returns the HTTP status code, eg. <see cref="F:System.Net.HttpStatusCode.OK"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.Serialization.IHttpResultSerializer.SerializeAsync(HotChocolate.Execution.IExecutionResult,System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Serializes the specified execution result.
+            </summary>
+            <param name="result">
+            The GraphQL execution result.
+            </param>
+            <param name="stream">
+            The HTTP response stream.
+            </param>
+            <param name="cancellationToken">
+            The request cancellation token.
+            </param>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.Subscriptions.ISubscriptionSession">
+            <summary>
+            Represents a session with an execution engine subscription.
+            A subscription session is created within a <see cref="T:HotChocolate.AspNetCore.Subscriptions.ISocketSession"/>.
+            Each socket session can have multiple subscription sessions open.
+            </summary>
+        </member>
+        <member name="E:HotChocolate.AspNetCore.Subscriptions.ISubscriptionSession.Completed">
+            <summary>
+            An event that indicates that the underlying subscription has completed.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.Subscriptions.ISubscriptionSession.Id">
+            <summary>
+            Gets the subscription id that the client has provided.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.AspNetCore.Subscriptions.ISubscriptionSession.Subscription">
+            <summary>
+            Gets the underlying subscription.
+            </summary>
+        </member>
+        <member name="E:HotChocolate.AspNetCore.Subscriptions.SubscriptionSession.Completed">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.AspNetCore.Subscriptions.SubscriptionSession.Id">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.AspNetCore.Subscriptions.SubscriptionSession.Subscription">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.AspNetCore.ThrowHelper">
+            <summary>
+            An internal helper class that centralizes the server exceptions.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.ToolDefaultFileMiddleware">
+            <summary>
+            This examines a directory path and determines if there is a default file present.
+            If so the file name is appended to the path and execution continues.
+            Note we don't just serve the file because it may require interpretation.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.ToolDefaultFileMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.FileProviders.IFileProvider,Microsoft.AspNetCore.Http.PathString)">
+            <summary>
+            Creates a new instance of the DefaultFilesMiddleware.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+            <param name="fileProvider">The <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider"/> used by this middleware.</param>
+            <param name="matchUrl">The match url.</param>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.ToolDefaultFileMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            This examines the request to see if it matches a configured directory, and if there are any files with the
+            configured default names in that directory.  If so this will append the corresponding file name to the request
+            path for a later middleware to handle.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.ToolOptionsFileMiddleware">
+            <summary>
+            This middleware handles the Banana Cake Pop configuration file request.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.AspNetCore.ToolStaticFileMiddleware">
+            <summary>
+            Enables serving static files for a given request path
+            </summary>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.ToolStaticFileMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.FileProviders.IFileProvider,Microsoft.AspNetCore.Http.PathString)">
+            <summary>
+            Creates a new instance of the StaticFileMiddleware.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+            <param name="hostingEnv">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostEnvironment"/> used by this middleware.</param>
+            <param name="options">The configuration options.</param>
+            <param name="loggerFactory">An <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> instance used to create loggers.</param>
+        </member>
+        <member name="M:HotChocolate.AspNetCore.ToolStaticFileMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Processes a request to determine if it matches a known file, and if so, serves it.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions">
+            <summary>
+            Provides GraphQL extensions to the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.MapGraphQL(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,HotChocolate.NameString)">
+            <summary>
+            Adds a GraphQL endpoint to the endpoint configurations.
+            </summary>
+            <param name="endpointRouteBuilder">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </param>
+            <param name="path">
+            The path to which the GraphQL endpoint shall be mapped.
+            </param>
+            <param name="schemaName">
+            The name of the schema that shall be used by this endpoint.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.MapGraphQL(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,Microsoft.AspNetCore.Http.PathString,HotChocolate.NameString)">
+            <summary>
+            Adds a GraphQL endpoint to the endpoint configurations.
+            </summary>
+            <param name="endpointRouteBuilder">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </param>
+            <param name="path">
+            The path to which the GraphQL endpoint shall be mapped.
+            </param>
+            <param name="schemaName">
+            The name of the schema that shall be used by this endpoint.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.MapGraphQLHttp(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,HotChocolate.NameString)">
+            <summary>
+            Adds a GraphQL HTTP endpoint to the endpoint configurations.
+            </summary>
+            <param name="endpointRouteBuilder">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </param>
+            <param name="pattern">
+            The path to which the GraphQL HTTP endpoint shall be mapped.
+            </param>
+            <param name="schemaName">
+            The name of the schema that shall be used by this endpoint.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.MapGraphQLHttp(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,Microsoft.AspNetCore.Routing.Patterns.RoutePattern,HotChocolate.NameString)">
+            <summary>
+            Adds a GraphQL HTTP endpoint to the endpoint configurations.
+            </summary>
+            <param name="endpointRouteBuilder">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </param>
+            <param name="pattern">
+            The path to which the GraphQL HTTP endpoint shall be mapped.
+            </param>
+            <param name="schemaName">
+            The name of the schema that shall be used by this endpoint.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.MapGraphQLWebSocket(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,HotChocolate.NameString)">
+            <summary>
+            Adds a GraphQL WebSocket endpoint to the endpoint configurations.
+            </summary>
+            <param name="endpointRouteBuilder">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </param>
+            <param name="pattern">
+            The path to which the GraphQL WebSocket endpoint shall be mapped.
+            </param>
+            <param name="schemaName">
+            The name of the schema that shall be used by this endpoint.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.MapGraphQLWebSocket(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,Microsoft.AspNetCore.Routing.Patterns.RoutePattern,HotChocolate.NameString)">
+            <summary>
+            Adds a GraphQL WebSocket endpoint to the endpoint configurations.
+            </summary>
+            <param name="endpointRouteBuilder">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </param>
+            <param name="pattern">
+            The path to which the GraphQL WebSocket endpoint shall be mapped.
+            </param>
+            <param name="schemaName">
+            The name of the schema that shall be used by this endpoint.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.MapGraphQLSchema(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String,HotChocolate.NameString)">
+            <summary>
+            Adds a GraphQL schema SDL endpoint to the endpoint configurations.
+            </summary>
+            <param name="endpointRouteBuilder">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </param>
+            <param name="pattern">
+            The path to which the GraphQL schema SDL endpoint shall be mapped.
+            </param>
+            <param name="schemaName">
+            The name of the schema that shall be used by this endpoint.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.MapGraphQLSchema(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,Microsoft.AspNetCore.Routing.Patterns.RoutePattern,HotChocolate.NameString)">
+            <summary>
+            Adds a GraphQL schema SDL endpoint to the endpoint configurations.
+            </summary>
+            <param name="endpointRouteBuilder">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </param>
+            <param name="pattern">
+            The path to which the GraphQL schema SDL endpoint shall be mapped.
+            </param>
+            <param name="schemaName">
+            The name of the schema that shall be used by this endpoint.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="endpointRouteBuilder" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.MapBananaCakePop(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.Nullable{Microsoft.AspNetCore.Http.PathString},System.String)">
+            <summary>
+            Adds a Banana Cake Pop endpoint to the endpoint configurations.
+            </summary>
+            <param name="endpointRouteBuilder">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/>.
+            </param>
+            <param name="toolPath">
+            The path to which banana cake pop is mapped.
+            </param>
+            <param name="relativeRequestPath">
+            The relative path on which the server is listening for GraphQL requests.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.AspNetCore.Builder.IEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.WithOptions(HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder,HotChocolate.AspNetCore.GraphQLServerOptions)">
+            <summary>
+            Specifies the GraphQL server options.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder"/>.
+            </param>
+            <param name="serverOptions">
+            The GraphQL server options.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.WithOptions(HotChocolate.AspNetCore.Extensions.GraphQLHttpEndpointConventionBuilder,HotChocolate.AspNetCore.GraphQLHttpOptions)">
+            <summary>
+            Specifies the GraphQL HTTP request options.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder"/>.
+            </param>
+            <param name="httpOptions">
+            The GraphQL HTTP request options.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.AspNetCore.Extensions.GraphQLEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.EndpointRouteBuilderExtensions.WithOptions(HotChocolate.AspNetCore.Extensions.BananaCakePopEndpointConventionBuilder,HotChocolate.AspNetCore.GraphQLToolOptions)">
+            <summary>
+            Specifies the Banana Cake Pop tooling options.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.AspNetCore.Extensions.BananaCakePopEndpointConventionBuilder"/>.
+            </param>
+            <param name="toolOptions">
+            The Banana Cake Pop tooling options.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.AspNetCore.Extensions.BananaCakePopEndpointConventionBuilder"/> so that
+            configuration can be chained.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions">
+            <summary>
+            Provides DI extension methods to configure a GraphQL server.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddGraphQLServerCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Int32)">
+            <summary>
+            Adds the GraphQL server core services to the DI.
+            </summary>
+            <param name="services">
+            The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </param>
+            <param name="maxAllowedRequestSize">
+            The max allowed GraphQL request size.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> so that configuration can be chained.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddGraphQLServer(Microsoft.Extensions.DependencyInjection.IServiceCollection,HotChocolate.NameString,System.Int32)">
+            <summary>
+            Adds a GraphQL server configuration to the DI.
+            </summary>
+            <param name="services">
+            The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </param>
+            <param name="schemaName">
+            The name of the schema. Use explicit schema names if you host multiple schemas.
+            </param>
+            <param name="maxAllowedRequestSize">
+            The max allowed GraphQL request size.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> so that configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddGraphQLServer(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,HotChocolate.NameString)">
+            <summary>
+            Adds a GraphQL server configuration to the DI.
+            </summary>
+            <param name="builder">
+            The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </param>
+            <param name="schemaName">
+            The name of the schema. Use explicit schema names if you host multiple schemas.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> so that configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddHttpRequestInterceptor``1(HotChocolate.Execution.Configuration.IRequestExecutorBuilder)">
+            <summary>
+            Adds an interceptor for GraphQL requests to the GraphQL configuration.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <typeparam name="T">
+            The <see cref="T:HotChocolate.AspNetCore.IHttpRequestInterceptor"/> implementation.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> so that configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddHttpRequestInterceptor``1(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.Func{System.IServiceProvider,``0})">
+            <summary>
+            Adds an interceptor for GraphQL requests to the GraphQL configuration.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="factory">
+            A factory that creates the interceptor instance.
+            </param>
+            <typeparam name="T">
+            The <see cref="T:HotChocolate.AspNetCore.IHttpRequestInterceptor"/> implementation.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> so that configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddHttpRequestInterceptor(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,HotChocolate.AspNetCore.HttpRequestInterceptorDelegate)">
+            <summary>
+            Adds an interceptor for GraphQL requests to the GraphQL configuration.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="interceptor">
+            The interceptor instance that shall be added to the configuration.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> so that configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddHttpResultSerializer(Microsoft.Extensions.DependencyInjection.IServiceCollection,HotChocolate.AspNetCore.Serialization.HttpResultSerialization,HotChocolate.AspNetCore.Serialization.HttpResultSerialization,System.Boolean)">
+            <summary>
+            Adds the <see cref="T:HotChocolate.AspNetCore.Serialization.DefaultHttpResultSerializer"/> with specific serialization settings
+            to the DI.
+            </summary>
+            <param name="services">
+            The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </param>
+            <param name="batchSerialization">
+            Specifies the batch serialization format.
+            </param>
+            <param name="deferSerialization">
+            Specifies the defer/stream serialization format.
+            </param>
+            <param name="indented">
+            Defines whether the underlying <see cref="T:System.Text.Json.Utf8JsonWriter"/>
+            should pretty print the JSON which includes:
+            indenting nested JSON tokens, adding new lines, and adding
+            white space between property names and values.
+            By default, the JSON is written without extra white spaces.
+            </param>
+            <returns>
+            Returns the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> so that configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddHttpResultSerializer``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds a custom http request serializer to the DI.
+            </summary>
+            <param name="services">
+            The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </param>
+            <typeparam name="T">
+            The type of the custom <see cref="T:HotChocolate.AspNetCore.Serialization.IHttpResultSerializer"/>.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> so that configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddSocketSessionInterceptor``1(HotChocolate.Execution.Configuration.IRequestExecutorBuilder)">
+            <summary>
+            Adds an interceptor for GraphQL socket sessions to the GraphQL configuration.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <typeparam name="T">
+            The <see cref="T:HotChocolate.AspNetCore.ISocketSessionInterceptor"/> implementation.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> so that configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.AddSocketSessionInterceptor``1(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.Func{System.IServiceProvider,``0})">
+            <summary>
+            Adds an interceptor for GraphQL socket sessions to the GraphQL configuration.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="factory">
+            A factory that creates the interceptor instance.
+            </param>
+            <typeparam name="T">
+            The <see cref="T:HotChocolate.AspNetCore.ISocketSessionInterceptor"/> implementation.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> so that configuration can be chained.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateAspNetCoreServiceCollectionExtensions.InitializeOnStartup(HotChocolate.Execution.Configuration.IRequestExecutorBuilder)">
+            <summary>
+            Adds the current GraphQL configuration to the warmup background service.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> so that configuration can be chained.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> is <c>null</c>.
+            </exception>
+        </member>
+    </members>
+</doc>

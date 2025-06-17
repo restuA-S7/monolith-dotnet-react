@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HotChocolate.Data.EntityFramework</name>
+    </assembly>
+    <members>
+        <member name="T:HotChocolate.Data.DbContextKind">
+            <summary>
+            Represents the way a <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> is injected and handled by the execution engine.
+            </summary>
+        </member>
+        <member name="F:HotChocolate.Data.DbContextKind.Synchronized">
+            <summary>
+            The <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> is configured as a scoped service per request and
+            will be retrieved from the <see cref="T:System.IServiceProvider" />.
+            The execution engine will ensure that this request instance of the <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/>
+            can only accessed by a single resolver at a time.
+            This is the default behavior when working with entity framework.
+            </summary>
+        </member>
+        <member name="F:HotChocolate.Data.DbContextKind.Pooled">
+            <summary>
+            The <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> is rented through the <see cref="T:Microsoft.EntityFrameworkCore.IDbContextFactory`1"/>
+            and returned by disposing it at the end of the resolver execution.
+            This <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/>  behavior should be used for better throughput.
+            </summary>
+        </member>
+        <member name="F:HotChocolate.Data.DbContextKind.Resolver">
+            <summary>
+            Resolvers that use a <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> will create their own
+            <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceScope"/> when executing. The <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> is retrieved from
+            the service scope and the scope is disposed at the end of the resolver execution.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.EntityFrameworkEnumerableExtensions.AsExecutable``1(Microsoft.EntityFrameworkCore.DbSet{``0})">
+            <summary>
+            Creates an entity framework executable for a <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1"/>
+            </summary>
+            <param name="source">The <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1"/>.</param>
+            <typeparam name="T">The entity type.</typeparam>
+            <returns>
+            Returns an <see cref="T:HotChocolate.IExecutable`1"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.EntityFrameworkEnumerableExtensions.AsEntityFrameworkExecutable``1(System.Linq.IQueryable{``0})">
+            <summary>
+            Creates an entity framework executable for a <see cref="T:System.Linq.IQueryable`1"/>
+            </summary>
+            <param name="source">The <see cref="T:System.Linq.IQueryable`1"/>.</param>
+            <typeparam name="T">The entity type.</typeparam>
+            <returns>
+            Returns an <see cref="T:HotChocolate.IExecutable`1"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.EntityFrameworkResolverContextExtensions.DbContext``1(HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Retrieves an instance of <typeparamref name="TDbContext"/>
+            from the LocalContextData.
+            </summary>
+            <param name="context">The resolver context.</param>
+            <typeparam name="TDbContext">
+            The type of the <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/>.
+            </typeparam>
+            <returns>An instance of <typeparamref name="TDbContext"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.EntityFrameworkRequestExecutorBuilderExtensions">
+            <summary>
+            Extension methods for configuring an <see cref="T:HotChocolate.Execution.Configuration.IResolverCompilerBuilder"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.EntityFrameworkRequestExecutorBuilderExtensions.RegisterDbContext``1(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,HotChocolate.Data.DbContextKind)">
+            <summary>
+            Registers a well-known <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> with the resolver compiler.
+            The <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> does no longer need any annotation in the resolver.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="kind">
+            The <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> kind defines the way a <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> is injected
+            and handled by the execution engine.
+            </param>
+            <typeparam name="TDbContext">
+            The <see cref="T:Microsoft.EntityFrameworkCore.DbContext"/> type.
+            </typeparam>
+            <returns>
+            An <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/> that can be used to configure a schema
+            and its execution.
+            </returns>
+        </member>
+    </members>
+</doc>

@@ -1,3 +1,4 @@
+C:\Users\rtirestu3456\Documents\AppTesting\MyApp\bin\Debug\net6.0\NuGet.Config
 C:\Users\rtirestu3456\Documents\AppTesting\MyApp\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\rtirestu3456\Documents\AppTesting\MyApp\bin\Debug\net6.0\appsettings.json
 C:\Users\rtirestu3456\Documents\AppTesting\MyApp\bin\Debug\net6.0\clientapp\package-lock.json

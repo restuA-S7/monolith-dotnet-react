@@ -1,0 +1,3065 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HotChocolate.Data</name>
+    </assembly>
+    <members>
+        <member name="M:HotChocolate.Data.DataEnumerableExtensions.AsExecutable``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Wraps the <see cref="T:System.Collections.Generic.IEnumerable`1"/> with <see cref="T:HotChocolate.Data.QueryableExecutable`1"/> to help
+            the execution engine to execute it more efficient
+            </summary>
+            <param name="source">The source of the <see cref="T:HotChocolate.IExecutable"/></param>
+            <typeparam name="T">The type parameter</typeparam>
+            <returns>The wrapped object</returns>
+        </member>
+        <member name="M:HotChocolate.Data.DataEnumerableExtensions.AsExecutable``1(System.Linq.IQueryable{``0})">
+            <summary>
+            Wraps the <see cref="T:System.Linq.IQueryable"/> with <see cref="T:HotChocolate.Data.QueryableExecutable`1"/> to help the
+            execution engine to execute it more efficient
+            </summary>
+            <param name="source">The source of the <see cref="T:HotChocolate.IExecutable"/></param>
+            <typeparam name="T">The type parameter</typeparam>
+            <returns>The wrapped object</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterConvention">
+            <summary>
+            The filter convention provides defaults for inferring filters.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.CreateDefinition(HotChocolate.Types.Descriptors.IConventionContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.Configure(HotChocolate.Data.Filters.IFilterConventionDescriptor)">
+            <summary>
+            This method is called on initialization of the convention but before the convention is
+            completed. The default implementation of this method does nothing. It can be overriden
+            by a derived class such that the convention can be further configured before it is
+            completed
+            </summary>
+            <param name="descriptor">
+            The descriptor that can be used to configure the convention
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.Complete(HotChocolate.Types.Descriptors.IConventionContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.GetTypeName(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.GetTypeDescription(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.GetFieldName(System.Reflection.MemberInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.GetFieldDescription(System.Reflection.MemberInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.GetFieldType(System.Reflection.MemberInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.GetOperationName(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.GetOperationDescription(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.GetArgumentName">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConvention.ApplyConfigurations(HotChocolate.Types.Descriptors.ITypeReference,HotChocolate.Data.Filters.IFilterInputTypeDescriptor)">
+            <inheritdoc cref="T:HotChocolate.Data.Filters.IFilterConvention"/>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.Operation(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.BindRuntimeType``2">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.BindRuntimeType(System.Type,System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.Configure``1(HotChocolate.Data.Filters.ConfigureFilterInputType)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.Configure``2(HotChocolate.Data.Filters.ConfigureFilterInputType{``1})">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.Provider``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.Provider``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.Provider(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.ArgumentName(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterConventionDescriptor.New(HotChocolate.Types.Descriptors.IDescriptorContext,System.String)">
+            <summary>
+            Creates a new descriptor for <see cref="T:HotChocolate.Data.Filters.FilterConvention"/>
+            </summary>
+            <param name="context">The descriptor context.</param>
+            <param name="scope">The scope</param>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterConventionExtension">
+            <summary>
+            The filter convention extension can be used to extend a convention.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterOperationConventionDescriptor.Name(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterOperationConventionDescriptor.Description(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterConvention">
+            <summary>
+            The filter convention provides defaults for inferring filters.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.GetTypeName(System.Type)">
+            <summary>
+            Gets the GraphQL type name from a runtime type.
+            </summary>
+            <param name="runtimeType">
+            The runtime type.
+            </param>
+            <returns>
+            Returns the GraphQL type name that was inferred from the <paramref name="runtimeType"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.GetTypeDescription(System.Type)">
+            <summary>
+            Gets the GraphQL type description from a runtime type.
+            </summary>
+            <param name="runtimeType">
+            The runtime type.
+            </param>
+            <returns>
+            Returns the GraphQL type description that was
+            inferred from the <paramref name="runtimeType"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.GetFieldName(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the GraphQL field name from a <see cref="T:System.Reflection.MemberInfo"/>.
+            </summary>
+            <param name="member">
+            The member from which a field shall be inferred.
+            </param>
+            <returns>
+            Returns the GraphQL field name that was inferred from the <see cref="T:System.Reflection.MemberInfo"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.GetFieldDescription(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the GraphQL field description from a <see cref="T:System.Reflection.MemberInfo"/>.
+            </summary>
+            <param name="member">
+            The member from which a field shall be inferred.
+            </param>
+            <returns>
+            Returns the GraphQL field description that was inferred from the
+            <see cref="T:System.Reflection.MemberInfo"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.GetFieldType(System.Reflection.MemberInfo)">
+            <summary>
+            Extracts the field type from a <see cref="T:System.Reflection.MemberInfo"/>.
+            </summary>
+            <param name="member">
+            The member from which a field shall be inferred.
+            </param>
+            <returns>
+            Returns a <see cref="!:RuntimeTypeReference"/> that represents the field type.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.GetOperationName(System.Int32)">
+            <summary>
+            Gets the operation name for the provided <paramref name="operationId"/>.
+            </summary>
+            <param name="operationId">
+            The internal operation ID.
+            </param>
+            <returns>
+            Returns the operation name.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.GetOperationDescription(System.Int32)">
+            <summary>
+            Gets the operation description for the provided <paramref name="operationId"/>.
+            </summary>
+            <param name="operationId">
+            The internal operation ID.
+            </param>
+            <returns>
+            Returns the operation description.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.GetArgumentName">
+            <summary>
+            Gets the filter argument name.
+            </summary>
+            <returns>
+            Returns the filter argument name.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.ApplyConfigurations(HotChocolate.Types.Descriptors.ITypeReference,HotChocolate.Data.Filters.IFilterInputTypeDescriptor)">
+            <summary>
+            Applies configurations to a filter type.
+            </summary>
+            <param name="typeReference">
+            The type reference representing the type.
+            </param>
+            <param name="descriptor">
+            The descriptor to which the configurations shall be applied to.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.CreateExecutor``1">
+            <summary>
+            Creates a middleware that represents the filter execution logic
+            for the specified entity type.
+            </summary>
+            <typeparam name="TEntityType">
+            The entity type for which an filter executor shall be created.
+            </typeparam>
+            <returns>
+            Returns a field middleware which represents the filter execution logic
+            for the specified entity type.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.ConfigureField(HotChocolate.Types.IObjectFieldDescriptor)">
+            <summary>
+            Configures the field where the filters are applied. This can be used to add context
+            data to the field.
+            </summary>
+            <param name="fieldDescriptor">
+            the field descriptor where the filtering is applied
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.IsAndAllowed">
+            <summary>
+            Checks if the filtering should contain the AND operator
+            </summary>
+            <returns>Return true if AND is allowed</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConvention.IsOrAllowed">
+            <summary>
+            Checks if the filtering should contain the OR operator
+            </summary>
+            <returns>Return true if OR is allowed</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterConventionDescriptor">
+            <summary>
+            This descriptor is used to configure a <see cref="T:HotChocolate.Data.Filters.FilterConvention"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.Operation(System.Int32)">
+            <summary>
+            Specifies an operation.
+            </summary>
+            <param name="operationId">
+            The internal ID that is used to identify the operation.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.BindRuntimeType``2">
+            <summary>
+            Binds a runtime type to a <see cref="T:HotChocolate.Data.Filters.FilterInputType"/> so that the convention
+            can infer the GraphQL type representation from internal runtime types
+            like <see cref="T:System.String"/>.
+            </summary>
+            <typeparam name="TRuntimeType">The runtime type.</typeparam>
+            <typeparam name="TFilterType">The GraphQL filter type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.BindRuntimeType(System.Type,System.Type)">
+            <summary>
+            Binds a runtime type to a <see cref="T:HotChocolate.Data.Filters.FilterInputType"/> so that the convention
+            can infer the GraphQL type representation from internal runtime types
+            like <see cref="T:System.String"/>.
+            </summary>
+            <param name="runtimeType">The runtime type.</param>
+            <param name="filterType">GraphQL filter type.</param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.Configure``1(HotChocolate.Data.Filters.ConfigureFilterInputType)">
+            <summary>
+            Provides additional configuration for a filter type.
+            </summary>
+            <param name="configure">
+            The configuration that shall be applied to the specified filter type.
+            </param>
+            <typeparam name="TFilterType">
+            The filter type for which additional configuration shall be provided.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.Configure``2(HotChocolate.Data.Filters.ConfigureFilterInputType{``1})">
+            <summary>
+            Provides additional configuration for a filter type.
+            </summary>
+            <param name="configure">
+            The configuration that shall be applied to the specified filter type.
+            </param>
+            <typeparam name="TFilterType">
+            The filter type for which additional configuration shall be provided.
+            </typeparam>
+            <typeparam name="TRuntimeType">
+            The underlying runtime type of the filter type.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.Provider``1">
+            <summary>
+            Specifies the filter provider.
+            </summary>
+            <typeparam name="TProvider">The filter provider type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.Provider``1(``0)">
+            <summary>
+            Specifies the filter provider.
+            </summary>
+            <param name="provider">The concrete filter provider that shall be used.</param>
+            <typeparam name="TProvider">The filter provider type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.Provider(System.Type)">
+            <summary>
+            Specifies the filter provider.
+            </summary>
+            <param name="provider">The filter provider type.</param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.ArgumentName(HotChocolate.NameString)">
+            <summary>
+            Defines the argument name of the filter used by
+            <see cref="!:FilterObjectFieldDescriptorExtensions.UseFiltering"/>
+            </summary>
+            <param name="argumentName">The argument name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="argumentName"/> is <c>null</c> or
+            <see cref="F:System.String.Empty"/>.
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.AddProviderExtension``1">
+            <summary>
+            Add a extensions that is applied to <see cref="T:HotChocolate.Data.Filters.FilterProvider`1"/>
+            </summary>
+            <typeparam name="TExtension">The filter provider extension type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.AddProviderExtension``1(``0)">
+            <summary>
+            Add a extensions that is applied to <see cref="T:HotChocolate.Data.Filters.FilterProvider`1"/>
+            </summary>
+            <param name="provider">
+            The concrete filter provider extension that shall be used.
+            </param>
+            <typeparam name="TExtension">The filter provider extension type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.AllowOr(System.Boolean)">
+            <summary>
+            Defines if OR-combinators are allowed for filtering.
+            </summary>
+            <param name="allow">
+            Specifies if OR-combinators are allowed or disallowed.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterConventionDescriptor.AllowAnd(System.Boolean)">
+            <summary>
+            Defines if AND-combinators are allowed for filtering.
+            </summary>
+            <param name="allow">
+            Specifies if AND-combinators are allowed or disallowed.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterOperationConventionDescriptor.Name(System.String)">
+            <summary>
+            Specify the name of the operation.
+            </summary>
+            <param name="name">
+            The operation name.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterOperationConventionDescriptor.Description(System.String)">
+            <summary>
+            Specify the description of the operation
+            </summary>
+            <param name="description">
+            The operation description
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableFilterVisitorContextExtensions.GetClosure(HotChocolate.Data.Filters.Expressions.QueryableFilterContext)">
+            <summary>
+            Reads the current closure from the context
+            </summary>
+            <param name="context">The context</param>
+            <returns>The current closure</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableFilterVisitorContextExtensions.TryCreateLambda(HotChocolate.Data.Filters.Expressions.QueryableFilterContext,System.Linq.Expressions.LambdaExpression@)">
+            <summary>
+            Tries to build the an expression based on the items that are stored on the scope
+            </summary>
+            <param name="context">the context</param>
+            <param name="expression">The query that was build</param>
+            <returns>True in case the query has been build successfully, otherwise false</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableFilterVisitorContextExtensions.TryCreateLambda``1(HotChocolate.Data.Filters.Expressions.QueryableFilterContext,System.Linq.Expressions.Expression{``0}@)">
+            <summary>
+            Tries to build the a typed expression based on the items that are stored on the scope
+            </summary>
+            <param name="context">the context</param>
+            <param name="expression">The query that was build</param>
+            <typeparam name="T">The generic type of the expression</typeparam>
+            <returns>True in case the query has been build successfully, otherwise false</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.Expressions.QueryableFilterExtensions">
+            <summary>
+            Extensions for filtering for <see cref="T:System.Collections.Generic.IEnumerable`1"/> and <see cref="T:System.Linq.IQueryable`1"/>
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableFilterExtensions.Filter``1(System.Linq.IQueryable{``0},HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Filters the selection set of the request onto the queryable.
+            </summary>
+            <param name="queryable">The queryable</param>
+            <param name="context">
+            The resolver context of the resolver that is annotated with UseFiltering
+            </param>
+            <returns>The filtered queryable</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableFilterExtensions.Filter``1(System.Collections.Generic.IEnumerable{``0},HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Filters the selection set of the request onto the enumerable.
+            </summary>
+            <param name="enumerable">The enumerable</param>
+            <param name="context">
+            The resolver context of the resolver that is annotated with UseFiltering
+            </param>
+            <returns>The filtered enumerable</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableFilterExtensions.Filter``1(HotChocolate.Data.QueryableExecutable{``0},HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Filters the selection set of the request onto the enumerable.
+            </summary>
+            <param name="enumerable">The enumerable</param>
+            <param name="context">
+            The resolver context of the resolver that is annotated with UseFiltering
+            </param>
+            <returns>The filtered enumerable</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.Expressions.QueryableComparableOperationHandler">
+            <summary>
+            The base of a mongodb operation handler specific for
+            <see cref="T:HotChocolate.Data.Filters.IComparableOperationFilterInputType"/>
+            If the <see cref="T:HotChocolate.Data.Filters.FilterTypeInterceptor"/> encounters a operation field that implements
+            <see cref="T:HotChocolate.Data.Filters.IComparableOperationFilterInputType"/> and matches the operation identifier
+            defined in <see cref="P:HotChocolate.Data.Filters.Expressions.QueryableComparableOperationHandler.Operation"/> the handler is bound
+            to the field
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.Expressions.QueryableComparableOperationHandler.Operation">
+            <summary>
+            Specifies the identifier of the operations that should be handled by this handler
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableComparableOperationHandler.CanHandle(HotChocolate.Configuration.ITypeCompletionContext,HotChocolate.Data.Filters.IFilterInputTypeDefinition,HotChocolate.Data.Filters.IFilterFieldDefinition)">
+            <summary>
+            Checks if the <see cref="T:HotChocolate.Data.Filters.FilterField"/> implements
+            <see cref="T:HotChocolate.Data.Filters.IComparableOperationFilterInputType"/> and has the operation identifier
+            defined in <see cref="P:HotChocolate.Data.Filters.Expressions.QueryableComparableOperationHandler.Operation"/>
+            </summary>
+            <param name="context">The discovery context of the schema</param>
+            <param name="typeDefinition">The definition of the declaring type of the field</param>
+            <param name="fieldDefinition">The definition of the field</param>
+            <returns>Returns true if the field can be handled</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableComparableOperationHandler.ParseValue(HotChocolate.Language.IValueNode,System.Object,HotChocolate.Types.IType,HotChocolate.Data.Filters.Expressions.QueryableFilterContext)">
+            <summary>
+            Converts the value of the <paramref name="parsedValue"/> into the needed runtime type
+            </summary>
+            <param name="node">The value node to parse</param>
+            <param name="parsedValue">The parsed value of the <paramref name="node"/></param>
+            <param name="type">
+            The type of the field that the <paramref name="node"/> was defined
+            </param>
+            <param name="context">The visitor context</param>
+            <returns>The converted value</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.Expressions.QueryableListOperationHandlerBase">
+            <summary>
+            The base of a operation handler specific for <see cref="T:HotChocolate.Data.Filters.IListFilterInputType"/>
+            If the <see cref="T:HotChocolate.Data.Filters.FilterTypeInterceptor"/> encounters a operation field that implements
+            <see cref="T:HotChocolate.Data.Filters.IListFilterInputType"/> and matches the operation identifier
+            defined in <see cref="P:HotChocolate.Data.Filters.Expressions.QueryableComparableOperationHandler.Operation"/> the handler is bound
+            to the field
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.Expressions.QueryableListOperationHandlerBase.Operation">
+            <summary>
+            Specifies the identifier of the operations that should be handled by this handler
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableListOperationHandlerBase.CanHandle(HotChocolate.Configuration.ITypeCompletionContext,HotChocolate.Data.Filters.IFilterInputTypeDefinition,HotChocolate.Data.Filters.IFilterFieldDefinition)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableListOperationHandlerBase.TryHandleEnter(HotChocolate.Data.Filters.Expressions.QueryableFilterContext,HotChocolate.Data.Filters.IFilterField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableListOperationHandlerBase.TryHandleLeave(HotChocolate.Data.Filters.Expressions.QueryableFilterContext,HotChocolate.Data.Filters.IFilterField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableListOperationHandlerBase.HandleListOperation(HotChocolate.Data.Filters.Expressions.QueryableFilterContext,HotChocolate.Data.Filters.IFilterField,HotChocolate.Language.ObjectFieldNode,System.Type,System.Linq.Expressions.LambdaExpression)">
+            <summary>
+            Maps a operation field to a list filter definition.
+            This method is called when the <see cref="T:HotChocolate.Data.Filters.FilterVisitor`2"/> enters a
+            field
+            </summary>
+            <param name="context">The context of the visitor</param>
+            <param name="field">The currently visited filter field</param>
+            <param name="closureType">The runtime type of the scope</param>
+            <param name="lambda">The expression of the nested operations</param>
+            <returns></returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.Expressions.QueryableDefaultFieldHandler">
+            <summary>
+            The default handler for all <see cref="T:HotChocolate.Data.Filters.FilterField"/> for the
+            <see cref="T:HotChocolate.Data.Filters.Expressions.QueryableFilterProvider"/>
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.Expressions.QueryableDefaultFieldHandler.CanHandle(HotChocolate.Configuration.ITypeCompletionContext,HotChocolate.Data.Filters.IFilterInputTypeDefinition,HotChocolate.Data.Filters.IFilterFieldDefinition)">
+            <summary>
+            Checks if the field not a filter operations field and if the member is defined on this
+            field
+            </summary>
+            <param name="context">The current context</param>
+            <param name="typeDefinition">The definition of the type that declares the field</param>
+            <param name="fieldDefinition">The definition of the field</param>
+            <returns>True in case the field can be handled</returns>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.IFilterField.DeclaringType">
+            <summary>
+            The type which declares this field.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.IFilterOperationField.Id">
+            <summary>
+            Gets the internal operation ID.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.Name(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.Description(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.Operation(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.Field(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.Ignore(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.Ignore(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.AllowOr(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.AllowAnd(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.Directive``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.Directive``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor.Directive(HotChocolate.NameString,HotChocolate.Language.ArgumentNode[])">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor`1.Name(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor`1.Description(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor`1.BindFields(HotChocolate.Types.BindingBehavior)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor`1.BindFieldsExplicitly">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor`1.BindFieldsImplicitly">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor`1.Field``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor`1.Ignore(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor`1.Ignore(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterInputTypeDescriptor`1.Ignore(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterInputType">
+            <summary>
+            Specifies a filter input type.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterInputTypeDescriptor">
+            <summary>
+            The filter input descriptor allows to configure a <see cref="T:HotChocolate.Data.Filters.FilterInputType"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.Name(HotChocolate.NameString)">
+            <summary>
+            Defines the name of the <see cref="T:HotChocolate.Data.Filters.FilterInputType`1"/>.
+            </summary>
+            <param name="value">The filter type name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c> or
+            <see cref="F:System.String.Empty"/>.
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.Description(System.String)">
+             <summary>
+             Adds explanatory text of the <see cref="T:HotChocolate.Data.Filters.FilterInputType`1"/>
+             that can be accessed via introspection.
+             </summary>
+             <param name="value">The filter type description.</param>
+            
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.Operation(System.Int32)">
+            <summary>
+            Defines a <see cref="T:HotChocolate.Data.Filters.FilterOperationField" /> field.
+            </summary>
+            <param name="operationId">
+            The internal operation ID.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.Field(HotChocolate.NameString)">
+            <summary>
+            Defines a <see cref="T:HotChocolate.Data.Filters.FilterField" /> with the specified name.
+            </summary>
+            <param name="name">
+            The name of the field.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.Ignore(System.Int32)">
+            <summary>
+            Ignore the specified property.
+            </summary>
+            <param name="operationId">
+            The internal operation ID.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.Ignore(HotChocolate.NameString)">
+            <summary>
+            Ignore the specified property.
+            </summary>
+            <param name="name">
+            The name of the field.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.AllowOr(System.Boolean)">
+            <summary>
+            Defines if OR-combinators are allowed for this filter.
+            </summary>
+            <param name="allow">
+            Specifies if OR-combinators are allowed or disallowed.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.AllowAnd(System.Boolean)">
+            <summary>
+            Defines if AND-combinators are allowed for this filter.
+            </summary>
+            <param name="allow">
+            Specifies if AND-combinators are allowed or disallowed.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.Directive``1(``0)">
+            <summary>
+            Adds a directive to this filter input type.
+            </summary>
+            <param name="directive">
+            The directive.
+            </param>
+            <typeparam name="TDirective">
+            The type of the directive.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.Directive``1">
+            <summary>
+            Adds a directive to this filter input type.
+            </summary>
+            <typeparam name="TDirective">
+            The type of the directive.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor.Directive(HotChocolate.NameString,HotChocolate.Language.ArgumentNode[])">
+            <summary>
+            Adds a directive to this filter input type.
+            </summary>
+            <param name="name">
+            The name of the directive.
+            </param>
+            <param name="arguments">
+            The directive argument values.
+            </param>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1">
+            <summary>
+            The filter input descriptor allows to configure a <see cref="T:HotChocolate.Data.Filters.FilterInputType"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.Name(HotChocolate.NameString)">
+            <summary>
+            Defines the name of the <see cref="T:HotChocolate.Data.Filters.FilterInputType`1"/>.
+            </summary>
+            <param name="value">The filter type name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c> or
+            <see cref="F:System.String.Empty"/>.
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.Description(System.String)">
+             <summary>
+             Adds explanatory text of the <see cref="T:HotChocolate.Data.Filters.FilterInputType`1"/>
+             that can be accessed via introspection.
+             </summary>
+             <param name="value">The filter type description.</param>
+            
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.BindFields(HotChocolate.Types.BindingBehavior)">
+             <summary>
+             <para>Defines the filter binding behavior.</para>
+             <para>
+             The default binding behavior is set to
+             <see cref="F:HotChocolate.Types.BindingBehavior.Implicit"/>.
+             </para>
+             </summary>
+             <param name="bindingBehavior">
+             The binding behavior.
+            
+             Implicit:
+             The filter type descriptor will try to infer the filters
+             from the specified <typeparamref name="T"/>.
+            
+             Explicit:
+             All filters have to be specified explicitly via one of the `Filter`
+             methods.
+             </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.BindFieldsExplicitly">
+            <summary>
+            Defines that all filters have to be specified explicitly.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.BindFieldsImplicitly">
+            <summary>
+            The filter type will will add
+            filters for all compatible fields.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.Field``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Defines a <see cref="T:HotChocolate.Data.Filters.FilterField" /> that binds to the specified property.
+            </summary>
+            <param name="propertyOrMember">
+            The property to which a filter field shall be bound.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.Ignore(System.Int32)">
+            <summary>
+            Ignore the specified property.
+            </summary>
+            <param name="operationId">
+            The internal operation ID.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.Ignore(HotChocolate.NameString)">
+            <summary>
+            Ignore the specified property.
+            </summary>
+            <param name="name">
+            The name of the field.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.Ignore(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Ignore the specified property.
+            </summary>
+            <param  name="propertyOrMember">
+            The property that shall be ignored.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.AllowOr(System.Boolean)">
+            <summary>
+            Defines if OR-combinators are allowed for this filter.
+            </summary>
+            <param name="allow">
+            Specifies if OR-combinators are allowed or disallowed.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.AllowAnd(System.Boolean)">
+            <summary>
+            Defines if AND-combinators are allowed for this filter.
+            </summary>
+            <param name="allow">
+            Specifies if AND-combinators are allowed or disallowed.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.Directive``1(``0)">
+            <summary>
+            Adds a directive to this filter input type.
+            </summary>
+            <param name="directive">
+            The directive.
+            </param>
+            <typeparam name="TDirective">
+            The type of the directive.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.Directive``1">
+            <summary>
+            Adds a directive to this filter input type.
+            </summary>
+            <typeparam name="TDirective">
+            The type of the directive.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterInputTypeDescriptor`1.Directive(HotChocolate.NameString,HotChocolate.Language.ArgumentNode[])">
+            <summary>
+            Adds a directive to this filter input type.
+            </summary>
+            <param name="name">
+            The name of the directive.
+            </param>
+            <param name="arguments">
+            The directive argument values.
+            </param>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IComparableOperationFilterInputType">
+            <summary>
+            Marks a <see cref="T:HotChocolate.Data.Filters.FilterInputType"/> as a <see cref="T:HotChocolate.Data.Filters.ComparableOperationFilterInputType`1"/>.
+            This is makes the identification and the mapping of a comparable types on
+            <see cref="T:HotChocolate.Data.Filters.FilterOperationHandler`2"/> easier.
+            <example><see cref="T:HotChocolate.Data.Filters.Expressions.QueryableComparableOperationHandler"/></example>
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IEnumOperationFilterInputType">
+            <summary>
+            Marks a <see cref="T:HotChocolate.Data.Filters.FilterInputType"/> as an <see cref="T:HotChocolate.Data.Filters.EnumOperationFilterInputType`1"/>.
+            This is makes the identification and the mapping of a comparable types on
+            <see cref="T:HotChocolate.Data.Filters.FilterOperationHandler`2"/> easier.
+            <example><see cref="T:HotChocolate.Data.Filters.Expressions.QueryableEnumEqualsHandler"/></example>
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IListFilterInputType">
+            <summary>
+            Marks a <see cref="T:HotChocolate.Data.Filters.FilterInputType"/> as an <see cref="T:HotChocolate.Data.Filters.ListFilterInputType`1"/>.
+            This is makes the identification and the mapping of a comparable types on
+            <see cref="T:HotChocolate.Data.Filters.FilterOperationHandler`2"/> easier.
+            <example><see cref="T:HotChocolate.Data.Filters.Expressions.QueryableListAnyOperationHandler"/></example>
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterCombinator">
+            <summary>
+            Specifies the supported filter combinators.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterFieldHandler`2">
+            <summary>
+            The base of a handler that can be bound to a <see cref="T:HotChocolate.Data.Filters.FilterField"/>. The handler is
+            executed during the visitation of a input object.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterFieldHandler`2.TryHandleEnter(`0,HotChocolate.Data.Filters.IFilterField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterFieldHandler`2.TryHandleLeave(`0,HotChocolate.Data.Filters.IFilterField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterFieldHandler`2.CanHandle(HotChocolate.Configuration.ITypeCompletionContext,HotChocolate.Data.Filters.IFilterInputTypeDefinition,HotChocolate.Data.Filters.IFilterFieldDefinition)">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterOperationCombinator">
+            <summary>
+            The <see cref="T:HotChocolate.Data.Filters.FilterVisitor`2"/> combines operation every time a
+            <see cref="T:HotChocolate.Language.ObjectValueNode"/> is left. The visitor uses this combinator to combine the
+            operation of the value node. The combinator is also used to combine
+            <see cref="F:HotChocolate.Data.Filters.FilterCombinator.Or"/> and <see cref="F:HotChocolate.Data.Filters.FilterCombinator.And"/> fields
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterOperationCombinator.TryCombineOperations``2(``0,System.Collections.Generic.Queue{``1},HotChocolate.Data.Filters.FilterCombinator,``1@)">
+            <summary>
+            Tries to combine all operations provided by <paramref name="operations"/> with the kind
+            of combinator specified bu <paramref name="combinator"/>.
+            </summary>
+            <param name="context">The context of the visitor</param>
+            <param name="operations">The operations to combine</param>
+            <param name="combinator">The kind of combinator that should be applied</param>
+            <param name="combined">
+            The combined operations as a new instance of <typeparamref name="T"/>
+            </param>
+            <typeparam name="TContext">The type of the context</typeparam>
+            <typeparam name="T">The type of the combined object</typeparam>
+            <returns>True if the combination was successful</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterOperationCombinator`2">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterOperationCombinator`2.TryCombineOperations(`0,System.Collections.Generic.Queue{`1},HotChocolate.Data.Filters.FilterCombinator,`1@)">
+            <summary>
+            Tries to combine all operations provided by <paramref name="operations"/> with the kind
+            of combinator specified bu <paramref name="combinator"/>.
+            </summary>
+            <param name="context">The context of the visitor</param>
+            <param name="operations">The operations to combine</param>
+            <param name="combinator">The kind of combinator that should be applied</param>
+            <param name="combined">
+            The combined operations as a new instance of <typeparamref name="T"/>
+            </param>
+            <returns>True if the combination was successful</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterOperationCombinator`2.TryCombineOperations``2(``0,System.Collections.Generic.Queue{``1},HotChocolate.Data.Filters.FilterCombinator,``1@)">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterOperationHandler`2">
+            <summary>
+            The base of a operation handler that can be bound to a <see cref="T:HotChocolate.Data.Filters.FilterOperationField"/>.
+            The is executed during the visitation of a input object. This base is optimized to handle
+            filter operations
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterOperationHandler`2.TryHandleEnter(`0,HotChocolate.Data.Filters.IFilterField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterOperationHandler`2.TryHandleOperation(`0,HotChocolate.Data.Filters.IFilterOperationField,HotChocolate.Language.ObjectFieldNode,`1@)">
+            <summary>
+            Maps a operation field to a provider specific result.
+            This method is called when the <see cref="T:HotChocolate.Data.Filters.FilterVisitor`2"/> enters a
+            field
+            </summary>
+            <param name="context">The <see cref="T:HotChocolate.Data.Filters.IFilterVisitorContext`1"/> of the visitor</param>
+            <param name="field">The field that is currently being visited</param>
+            <param name="node">The value node of this field</param>
+            <returns>If <c>true</c> is returned the action is used for further processing</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterProvider`1">
+            <summary>
+            A <see cref="T:HotChocolate.Data.Filters.FilterProvider`1"/> translates a incoming query to another
+            object structure at runtime
+            </summary>
+            <typeparam name="TContext">The type of the context</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterProvider`1.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterProvider`1.#ctor(System.Action{HotChocolate.Data.Filters.IFilterProviderDescriptor{`0}})">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.Data.Filters.FilterProvider`1.FieldHandlers">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterProvider`1.CreateDefinition(HotChocolate.Types.Descriptors.IConventionContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterProvider`1.Complete(HotChocolate.Types.Descriptors.IConventionContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterProvider`1.Configure(HotChocolate.Data.Filters.IFilterProviderDescriptor{`0})">
+            <summary>
+            This method is called on initialization of the provider but before the provider is
+            completed. The default implementation of this method does nothing. It can be overriden
+            by a derived class such that the provider can be further configured before it is
+            completed
+            </summary>
+            <param name="descriptor">
+            The descriptor that can be used to configure the provider
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterProvider`1.CreateExecutor``1(HotChocolate.NameString)">
+            <summary>
+            Creates the executor that is attached to the middleware pipeline of the field
+            </summary>
+            <param name="argumentName">
+            The argument name specified in the <see cref="T:HotChocolate.Data.Filters.FilterConvention"/>
+            </param>
+            <typeparam name="TEntityType">The runtime type of the entity</typeparam>
+            <returns>A middleware</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterProvider`1.ConfigureField(HotChocolate.NameString,HotChocolate.Types.IObjectFieldDescriptor)">
+            <summary>
+            Is called on each field that filtering is applied to. This method can be used to
+            customize a field.
+            </summary>
+            <param name="argumentName">
+            The argument name specified in the <see cref="T:HotChocolate.Data.Filters.FilterConvention"/>
+            </param>
+            <param name="descriptor">The descriptor of the field</param>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterScope`1">
+            <summary>
+            A logical scope of a visitor.
+            In case of queryable this would be a closure
+            <code>
+            //          /------------------------ SCOPE 1 -----------------------------\
+            //                                        /----------- SCOPE 2 -------------\
+            users.Where(x => x.Company.Addresses.Any(y => y.Street == "221B Baker Street"))
+            </code>
+            </summary>
+            <typeparam name="T">The type of the filter definition</typeparam>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.FilterScope`1.Level">
+            <summary>
+             Contains a queue for each level of the AST. The queues contain all operations of a level
+             A new queue is neeeded when entering new <see cref="T:HotChocolate.Language.ObjectValueNode"/>
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.FilterScope`1.Instance">
+            <summary>
+             Stores the current instance. In case of an expression this would be x.Foo.Bar
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.FilterVisitorContext`1">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.Data.Filters.FilterVisitorContext`1.Scopes">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.Data.Filters.FilterVisitorContext`1.Types">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.Data.Filters.FilterVisitorContext`1.Operations">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.Data.Filters.FilterVisitorContext`1.Errors">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Filters.FilterVisitorContext`1.CreateScope">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterFieldHandler">
+            <summary>
+            Represents a handler that can be bound to a <see cref="T:HotChocolate.Data.Filters.FilterField"/>
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterFieldHandler.CanHandle(HotChocolate.Configuration.ITypeCompletionContext,HotChocolate.Data.Filters.IFilterInputTypeDefinition,HotChocolate.Data.Filters.IFilterFieldDefinition)">
+            <summary>
+            Tests if this field handler can handle a field If it can handle the field it
+            will be attached to the <see cref="T:HotChocolate.Data.Filters.FilterField"/>
+            </summary>
+            <param name="context">The discovery context of the schema</param>
+            <param name="typeDefinition">The definition of the declaring type of the field</param>
+            <param name="fieldDefinition">The definition of the field</param>
+            <returns>Returns true if the field can be handled</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterFieldHandler`1">
+            <summary>
+            Represents a handler that can be bound to a <see cref="T:HotChocolate.Data.Filters.FilterField"/>. The handler is
+            executed during the visitation of a input object.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterFieldHandler`1.TryHandleEnter(`0,HotChocolate.Data.Filters.IFilterField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <summary>
+            This method is called when the <see cref="T:HotChocolate.Data.Filters.FilterVisitor`2"/> encounters a
+            field
+            </summary>
+            <param name="context">The <see cref="T:HotChocolate.Data.Filters.IFilterVisitorContext`1"/> of the visitor</param>
+            <param name="field">The field that is currently being visited</param>
+            <param name="node">The value node of this field</param>
+            <param name="action">
+            The <see cref="T:HotChocolate.Language.Visitors.ISyntaxVisitorAction"/> that the visitor should
+            continue with
+            </param>
+            <returns>If <c>true</c> is returned the action is used for further processing</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterFieldHandler`1.TryHandleLeave(`0,HotChocolate.Data.Filters.IFilterField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <summary>
+            This method is called when the <see cref="T:HotChocolate.Data.Filters.FilterVisitor`2"/> leaves a
+            field
+            </summary>
+            <param name="context">The <see cref="T:HotChocolate.Data.Filters.IFilterVisitorContext`1"/> of the visitor</param>
+            <param name="field">The field that is currently being visited</param>
+            <param name="node">The value node of this field</param>
+            <param name="action">
+            The <see cref="T:HotChocolate.Language.Visitors.ISyntaxVisitorAction"/> that the visitor should
+            continue with
+            </param>
+            <returns>If <c>true</c> is returned the action is used for further processing</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterFieldHandler`2">
+            <inheritdoc/>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterProvider">
+            <summary>
+            A <see cref="T:HotChocolate.Data.Filters.IFilterProvider"/> translates a incoming query to another
+            object structure at runtime
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.IFilterProvider.FieldHandlers">
+            <summary>
+            A collection of all <see cref="T:HotChocolate.Data.Filters.IFilterFieldHandler"/> that this provider knows.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterProvider.CreateExecutor``1(HotChocolate.NameString)">
+            <summary>
+            Creates a middleware that represents the filter execution logic
+            for the specified entity type.
+            </summary>
+            <typeparam name="TEntityType">
+            The entity type for which an filter executor shall be created.
+            </typeparam>
+            <returns>
+            Returns a field middleware which represents the filter execution logic
+            for the specified entity type.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterProvider.ConfigureField(HotChocolate.NameString,HotChocolate.Types.IObjectFieldDescriptor)">
+            <summary>
+            Configures the field where the filters are applied. This can be used to add context
+            data to the field.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterProviderDescriptor`1.AddFieldHandler``1">
+            <summary>
+            Adds a <see cref="T:HotChocolate.Data.Filters.IFilterFieldHandler`2"/> to the provider
+            This field handler is either injected by the dependency injection or created by an
+            activator
+            </summary>
+            <typeparam name="TFieldHandler">The type of the field handler</typeparam>
+            <returns>The descriptor that this methods was called on</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterProviderDescriptor`1.AddFieldHandler``1(``0)">
+            <summary>
+            Adds an instance of a  <see cref="T:HotChocolate.Data.Filters.IFilterFieldHandler`2"/> to the provider
+            This instance is directly used by the visitor for executing filters
+            </summary>
+            <param name="fieldHandler"></param>
+            <typeparam name="TFieldHandler">The type of the field handler</typeparam>
+            <returns>The descriptor that this methods was called on</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterVisitorContext">
+            <summary>
+            A context object that is passed along the visitation cycle
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.IFilterVisitorContext.Types">
+            <summary>
+            The already visited types
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.IFilterVisitorContext.Operations">
+            <summary>
+            The already visited operations
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Filters.IFilterVisitorContext.Errors">
+            <summary>
+            A list of errors that will be raised once the visitation is finished
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Filters.IFilterVisitorContext`1">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.Data.Filters.IFilterVisitorContext`1.Scopes">
+            <summary>
+            The different scopes of the visitor
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Filters.IFilterVisitorContext`1.CreateScope">
+            <summary>
+            Creates a new scope of the visitor
+            </summary>
+            <returns>The created scope</returns>
+        </member>
+        <member name="T:HotChocolate.Data.UseFilteringAttribute">
+            <summary>
+            Registers the middleware and adds the arguments for filtering
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.UseFilteringAttribute.Type">
+            <summary>
+            Gets or sets the filter type which specifies the filter object structure.
+            </summary>
+            <value>The filter type</value>
+        </member>
+        <member name="P:HotChocolate.Data.UseFilteringAttribute.Scope">
+            <summary>
+            Sets the scope for the convention
+            </summary>
+            <value>The name of the scope</value>
+        </member>
+        <member name="M:HotChocolate.Data.UseFilteringAttribute.OnConfigure(HotChocolate.Types.Descriptors.IDescriptorContext,HotChocolate.Types.IObjectFieldDescriptor,System.Reflection.MemberInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.FilterConventionDescriptorExtensions.AddDefaults(HotChocolate.Data.Filters.IFilterConventionDescriptor)">
+            <summary>
+            Initializes the default configuration for <see cref="T:System.Linq.IQueryable"/> and
+            <see cref="T:System.Collections.Generic.IEnumerable`1"/> on the convention
+            </summary>
+            <param name="descriptor">The descriptor where the handlers are registered</param>
+            <returns>The descriptor that was passed in as a parameter</returns>
+        </member>
+        <member name="M:HotChocolate.Data.FilterConventionDescriptorExtensions.AddDefaultOperations(HotChocolate.Data.Filters.IFilterConventionDescriptor)">
+            <summary>
+            Adds default operations to the descriptor
+            </summary>
+            <param name="descriptor">The descriptor where the handlers are registered</param>
+            <returns>The descriptor that was passed in as a parameter</returns>
+            <exception cref="T:System.ArgumentNullException">
+            Throws in case the argument <paramref name="descriptor"/> is null
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Data.FilterConventionDescriptorExtensions.BindDefaultTypes(HotChocolate.Data.Filters.IFilterConventionDescriptor)">
+            <summary>
+            Binds common runtime types to the according <see cref="T:HotChocolate.Data.Filters.FilterInputType"/>
+            </summary>
+            <param name="descriptor">The descriptor where the handlers are registered</param>
+            <returns>The descriptor that was passed in as a parameter</returns>
+            <exception cref="T:System.ArgumentNullException">
+            Throws in case the argument <paramref name="descriptor"/> is null
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Data.FilterConventionDescriptorQueryableExtensions.UseQueryableProvider(HotChocolate.Data.Filters.IFilterConventionDescriptor)">
+            <summary>
+            Adds a <see cref="T:HotChocolate.Data.Filters.Expressions.QueryableFilterProvider"/> with default configuration
+            </summary>
+            <param name="descriptor">The descriptor where the provider is registered</param>
+            <returns>The descriptor that was passed in as a parameter</returns>
+        </member>
+        <member name="M:HotChocolate.Data.FilterConventionDescriptorQueryableExtensions.AddDefaultFieldHandlers(HotChocolate.Data.Filters.IFilterProviderDescriptor{HotChocolate.Data.Filters.Expressions.QueryableFilterContext})">
+            <summary>
+            Initializes the default configuration of the provider by registering handlers
+            </summary>
+            <param name="descriptor">The descriptor where the handlers are registered</param>
+            <returns>The descriptor that was passed in as a parameter</returns>
+        </member>
+        <member name="T:HotChocolate.Data.UseFirstOrDefaultAttribute">
+            <summary>
+            Returns the first element of the sequence that satisfies a condition or a default value if
+            no such element is found. Applies the <see cref="T:HotChocolate.Data.UseSingleOrDefaultAttribute"/> to the field
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.UseProjectionAttribute">
+            <summary>
+            Projects the selection set of the request onto the field. Registers a middleware that
+            uses the registered <see cref="T:HotChocolate.Data.Projections.ProjectionConvention"/> to apply the projections
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.UseProjectionAttribute.Scope">
+            <summary>
+            Sets the scope for the convention
+            </summary>
+            <value>The name of the scope</value>
+        </member>
+        <member name="M:HotChocolate.Data.UseProjectionAttribute.OnConfigure(HotChocolate.Types.Descriptors.IDescriptorContext,HotChocolate.Types.IObjectFieldDescriptor,System.Reflection.MemberInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.Data.UseSingleOrDefaultAttribute">
+            <summary>
+            Returns the only element of a sequence, or a default value if the sequence is empty. Applies
+            the <see cref="T:HotChocolate.Data.UseSingleOrDefaultAttribute"/> to the field.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.IProjectionConvention">
+            <summary>
+            The projection convention provides defaults for projections projections.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionConvention.CreateExecutor``1">
+            <summary>
+            Creates a middleware that represents the projection execution logic
+            for the specified entity type.
+            </summary>
+            <typeparam name="TEntityType">
+            The entity type for which an projection executor shall be created.
+            </typeparam>
+            <returns>
+            Returns a field middleware which represents the projection execution logic
+            for the specified entity type.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionConvention.CreateOptimizer">
+            <summary>
+            Creates a new selection optimizer for this projection convention.
+            </summary>
+            <returns>
+            Returns the selection optimizer for this projection convention.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionConventionDescriptor.Provider``1">
+            <summary>
+            Specifies the projection provider.
+            </summary>
+            <typeparam name="TProvider">The projection provider type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionConventionDescriptor.Provider``1(``0)">
+            <summary>
+            Specifies the projection provider.
+            </summary>
+            <param name="provider">The concrete projection provider that shall be used.</param>
+            <typeparam name="TProvider">The projection provider type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionConventionDescriptor.Provider(System.Type)">
+            <summary>
+            Specifies the projection provider.
+            </summary>
+            <param name="provider">The projection provider type.</param>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionConventionDescriptor.AddProviderExtension``1">
+            <summary>
+            Add a extensions that is applied to <see cref="T:HotChocolate.Data.Projections.ProjectionProvider"/>
+            </summary>
+            <typeparam name="TExtension">The filter provider extension type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionConventionDescriptor.AddProviderExtension``1(``0)">
+            <summary>
+            Add a extensions that is applied to <see cref="T:HotChocolate.Data.Projections.ProjectionProvider"/>
+            </summary>
+            <param name="provider">
+            The concrete filter provider extension that shall be used.
+            </param>
+            <typeparam name="TExtension">The filter provider extension type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldInterceptor.CanHandle(HotChocolate.Execution.Processing.ISelection)">
+            <summary>
+            Tests if this interceptor can handle a selection If it can handle the selection it
+            will be attached to the compiled selection set on the
+            type <see cref="T:HotChocolate.Data.Projections.ProjectionSelection"/>
+            </summary>
+            <param name="selection">The selection to test for</param>
+            <returns>Returns true if the selection can be handled</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldInterceptor`1.BeforeProjection(`0,HotChocolate.Execution.Processing.ISelection)">
+            <summary>
+            This method is called before the enter and leave methods of a
+            <see cref="T:HotChocolate.Data.Projections.IProjectionFieldHandler`1"/>
+            </summary>
+            <param name="context">The context of the <see cref="T:HotChocolate.Data.Projections.IProjectionVisitorContext"/></param>
+            <param name="selection">The current selection</param>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldInterceptor`1.AfterProjection(`0,HotChocolate.Execution.Processing.ISelection)">
+            <summary>
+            This method is called after the enter and leave methods of a
+            <see cref="T:HotChocolate.Data.Projections.IProjectionFieldHandler`1"/>
+            </summary>
+            <param name="context">The context of the <see cref="T:HotChocolate.Data.Projections.IProjectionVisitorContext"/></param>
+            <param name="selection">The current selection</param>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.IProjectionProvider">
+            <summary>
+            The projection convention provides defaults for rewriter and providers filters.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionProvider.CreateExecutor``1">
+            <summary>
+            Creates a middleware that represents the filter execution logic
+            for the specified entity type.
+            </summary>
+            <typeparam name="TEntityType">
+            The entity type for which an filter executor shall be created.
+            </typeparam>
+            <returns>
+            Returns a field middleware which represents the filter execution logic
+            for the specified entity type.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionProvider.RewriteSelection(HotChocolate.Execution.Processing.SelectionOptimizerContext,HotChocolate.Execution.Processing.Selection)">
+            <summary>
+            Rewrites a selection optimized for projection
+            </summary>
+            <param name="context">The context of the optimizer</param>
+            <param name="selection">The selection to rewrite</param>
+            <returns>
+            Either a new rewritten selection or the same one if no rewriting was performed
+            </returns>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.IProjectionProviderDescriptor">
+            <summary>
+            This descriptor is used to configure a <see cref="T:HotChocolate.Data.Projections.ProjectionProvider"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionProviderDescriptor.RegisterFieldHandler``1">
+            <summary>
+            Registers a field handler that is used to project selections to the database
+            This field handler is either injected by the dependency injection or created by an
+            activator
+            </summary>
+            <typeparam name="THandler">The type of the field handler</typeparam>
+            <returns>The descriptor that this methods was called on</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionProviderDescriptor.RegisterFieldHandler``1(``0)">
+            <summary>
+            Registers an instance of a field handler that is used to project selections to the
+            database. This instance is directly used by the visitor for projection the selection set
+            </summary>
+            <typeparam name="THandler">The type of the field handler</typeparam>
+            <returns>The descriptor that this methods was called on</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionProviderDescriptor.RegisterFieldInterceptor``1">
+            <summary>
+            Registers a field interceptor that is used to intercept the projection of a field
+            This can be used to emulate middlewares like UseFiltering and modify the context
+            before the actual field projection happens
+            </summary>
+            <typeparam name="THandler">The type of the field interceptor</typeparam>
+            <returns>The descriptor that this methods was called on</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionProviderDescriptor.RegisterFieldInterceptor``1(``0)">
+            <summary>
+            Registers an instance of a field interceptor that is used to intercept the projection
+            of a field. This can be used to emulate middlewares like UseFiltering and modify
+            the context before the actual field projection happens.
+            This instance is directly used by the visitor for projection the selection set
+            </summary>
+            <typeparam name="THandler">The type of the field interceptor</typeparam>
+            <returns>The descriptor that this methods was called on</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionProviderDescriptor.RegisterOptimizer``1">
+            <summary>
+            Registers a field optimizer that is used to optimize a selection set before it
+            is projected. With optimizers you can delete, add or rewrite fields on the selection
+            set. This can also be used to rewrite the resolver pipeline.
+            </summary>
+            <typeparam name="THandler">The type of the field optimizer</typeparam>
+            <returns>The descriptor that this methods was called on</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionProviderDescriptor.RegisterOptimizer``1(``0)">
+            <summary>
+            Registers a instance of an optimizer that is used to optimize a selection set before it
+            is projected. With optimizers you can delete, add or rewrite fields on the selection
+            set. This can also be used to rewrite the resolver pipeline.
+            This instance is directly used by the visitor for projection the selection set
+            </summary>
+            <param name="handler"></param>
+            <typeparam name="THandler"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionConventionDescriptor.Provider``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionConventionDescriptor.Provider``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionConventionDescriptor.Provider(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionConventionDescriptor.AddProviderExtension``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionConventionDescriptor.AddProviderExtension``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionConventionDescriptor.New(HotChocolate.Types.Descriptors.IDescriptorContext,System.String)">
+            <summary>
+            Creates a new descriptor for <see cref="T:HotChocolate.Data.Projections.ProjectionConvention"/>
+            </summary>
+            <param name="context">The descriptor context.</param>
+            <param name="scope">The scope</param>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.Handlers.ProjectionInterceptorCombinator`1">
+            <summary>
+            This wrapper is used to combined two interceptors and create a chain
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.ProjectionProvider">
+            <summary>
+            A <see cref="T:HotChocolate.Data.Projections.ProjectionProvider"/> translates a incoming query to another
+            object structure at runtime
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProvider.CreateDefinition(HotChocolate.Types.Descriptors.IConventionContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProvider.Configure(HotChocolate.Data.Projections.IProjectionProviderDescriptor)">
+            <summary>
+            This method is called on initialization of the provider but before the provider is
+            completed. The default implementation of this method does nothing. It can be overriden
+            by a derived class such that the provider can be further configured before it is
+            completed
+            </summary>
+            <param name="descriptor">
+            The descriptor that can be used to configure the provider
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProvider.CreateExecutor``1">
+            <summary>
+            Creates the executor that is attached to the middleware pipeline of the field
+            </summary>
+            <typeparam name="TEntityType">The runtime type of the entity</typeparam>
+            <returns>A middleware</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProviderDescriptor.RegisterFieldHandler``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProviderDescriptor.RegisterFieldHandler``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProviderDescriptor.RegisterFieldInterceptor``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProviderDescriptor.RegisterFieldInterceptor``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProviderDescriptor.RegisterOptimizer``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProviderDescriptor.RegisterOptimizer``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Projections.ProjectionProviderDescriptor.New(HotChocolate.Types.Descriptors.IDescriptorContext,System.String)">
+            <summary>
+            Creates a new descriptor for <see cref="T:HotChocolate.Data.Projections.ProjectionProvider"/>
+            </summary>
+            <param name="context">The descriptor context.</param>
+            <param name="scope">The scope</param>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.Expressions.QueryableProjectExtensions">
+            <summary>
+            Extensions for projection for <see cref="T:System.Collections.Generic.IEnumerable`1"/> and <see cref="T:System.Linq.IQueryable`1"/>
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.QueryableProjectExtensions.Project``1(System.Linq.IQueryable{``0},HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Projects the selection set of the request onto the queryable.
+            </summary>
+            <param name="queryable">The queryable</param>
+            <param name="context">
+            The resolver context of the resolver that is annotated with UseProjection
+            </param>
+            <returns>The projected queryable</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.QueryableProjectExtensions.Project``1(System.Collections.Generic.IEnumerable{``0},HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Projects the selection set of the request onto the enumerable.
+            </summary>
+            <param name="enumerable">The enumerable</param>
+            <param name="context">
+            The resolver context of the resolver that is annotated with UseProjection
+            </param>
+            <returns>The projected enumerable</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.QueryableProjectExtensions.Project``1(HotChocolate.Data.QueryableExecutable{``0},HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Projects the selection set of the request onto the enumerable.
+            </summary>
+            <param name="enumerable">The enumerable</param>
+            <param name="context">
+            The resolver context of the resolver that is annotated with UseProjection
+            </param>
+            <returns>The projected enumerable</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.Expressions.Handlers.ProjectionFieldHandler`1">
+            <summary>
+            A handler that can intersect a <see cref="T:HotChocolate.Execution.Processing.ISelection"/> and optimize the selection set for
+            projections.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.Handlers.ProjectionFieldHandler`1.Wrap(HotChocolate.Data.Projections.IProjectionFieldInterceptor)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.Handlers.ProjectionFieldHandler`1.CanHandle(HotChocolate.Execution.Processing.ISelection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.Handlers.ProjectionFieldHandler`1.OnBeforeEnter(`0,HotChocolate.Execution.Processing.ISelection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.Handlers.ProjectionFieldHandler`1.TryHandleEnter(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.Handlers.ProjectionFieldHandler`1.OnAfterEnter(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.Handlers.ProjectionFieldHandler`1.OnBeforeLeave(`0,HotChocolate.Execution.Processing.ISelection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.Handlers.ProjectionFieldHandler`1.TryHandleLeave(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.Handlers.ProjectionFieldHandler`1.OnAfterLeave(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction)">
+            <inheritdoc/>
+        </member>
+        <member name="P:HotChocolate.Data.Projections.Expressions.QueryableProjectionScope.Level">
+            <summary>
+             Contains a queue for each level of the AST. The queues contain all operations of a level
+             A new queue is needed when entering new <see cref="T:HotChocolate.Language.ObjectValueNode"/>
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.QueryableProjectionScopeExtensions.Project``1(HotChocolate.Data.Projections.Expressions.QueryableProjectionScope)">
+            <summary>
+            Creates an expression based on the result stored on <see cref="T:HotChocolate.Data.Projections.Expressions.QueryableProjectionScope"/>.
+            </summary>
+            <param name="scope">The scope that contains the projection information</param>
+            <typeparam name="T">The target type</typeparam>
+            <returns>An expression</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.Expressions.QueryableProjectionScopeExtensions.Project``2(HotChocolate.Data.Projections.Expressions.QueryableProjectionScope)">
+            <summary>
+            Creates an expression based on the result stored on <see cref="T:HotChocolate.Data.Projections.Expressions.QueryableProjectionScope"/>.
+            Casts the result onto <typeparamref name="TTarget"/> in the lambda
+            </summary>
+            <param name="scope">The scope that contains the projection information</param>
+            <typeparam name="T">The target type</typeparam>
+            <typeparam name="TTarget">The target result type of the expression</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.FirstOrDefaultMiddleware`1">
+            <summary>
+            Returns the first element of the sequence that satisfies a condition or a default value if
+            no such element is found.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Projections.SelectionVisitor.DefaultAction">
+            <summary>
+            The visitor default action.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:HotChocolate.Data.Projections.SelectionVisitor.Break">
+            <summary>
+            Ends traversing the graph.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Projections.SelectionVisitor.Skip">
+            <summary>
+            Skips the child nodes and the current node.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Projections.SelectionVisitor.Continue">
+            <summary>
+            Continues traversing the graph.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Projections.SelectionVisitor.SkipAndLeave">
+            <summary>
+            Skips the child node but completes the current node.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.SingleOrDefaultMiddleware`1">
+            <summary>
+            Returns the only element of the resolved value, or a default value if the sequence is empty.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.IProjectionFieldHandler">
+            <summary>
+            A handler that can intersect a <see cref="T:HotChocolate.Execution.Processing.ISelection"/> and optimize the selection set for
+            projections.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldHandler.CanHandle(HotChocolate.Execution.Processing.ISelection)">
+            <summary>
+            Tests if this field handle can handle a selection. If it can handle the selection it
+            will be attached to the compiled selection set on the
+            type <see cref="T:HotChocolate.Data.Projections.ProjectionSelection"/>
+            </summary>
+            <param name="selection">The selection to test for</param>
+            <returns>Returns true if the selection can be handled</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldHandler.Wrap(HotChocolate.Data.Projections.IProjectionFieldInterceptor)">
+            <summary>
+            Wrapped this field handler with a type interceptor
+            </summary>
+            <param name="interceptor">
+            The interceptor that this handler should be wrapped with
+            </param>
+            <returns>The wrapped handler</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.IProjectionFieldHandler`1">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.OnBeforeEnter(`0,HotChocolate.Execution.Processing.ISelection)">
+            <summary>
+            This method is called before the visitor calls
+            <see cref="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.TryHandleEnter(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction@)"/>
+            </summary>
+            <param name="context">The context of the <see cref="T:HotChocolate.Data.Projections.IProjectionVisitorContext"/></param>
+            <param name="selection">The current selection</param>
+            <returns>
+            The instance of <see cref="!:TContext"/> that is used in TryHandleEnter
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.TryHandleEnter(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction@)">
+            <summary>
+            Tries to apply projection to the field. This method is called after
+            <see cref="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.OnBeforeEnter(`0,HotChocolate.Execution.Processing.ISelection)"/> and before
+            <see cref="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.OnAfterEnter(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction)"/>
+            </summary>
+            <param name="context">The context of the <see cref="T:HotChocolate.Data.Projections.IProjectionVisitorContext"/></param>
+            <param name="selection">The current selection</param>
+            <param name="action">
+            The <see cref="T:HotChocolate.Data.Projections.ISelectionVisitorAction"/> that the visitor should
+            continue with
+            </param>
+            <returns>If <c>true</c> is returned the action is used for further processing</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.OnAfterEnter(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction)">
+            <summary>
+            This method is called after the visitor calls
+            <see cref="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.TryHandleEnter(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction@)"/>
+            </summary>
+            <param name="context">The context of the <see cref="T:HotChocolate.Data.Projections.IProjectionVisitorContext"/></param>
+            <param name="selection">The current selection</param>
+            <param name="result">The action produced by TryHandleEnter</param>
+            <returns>
+            The instance of <see cref="!:TContext"/> that is used in on leave
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.OnBeforeLeave(`0,HotChocolate.Execution.Processing.ISelection)">
+            <summary>
+            This method is called before the visitor calls
+            <see cref="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.TryHandleLeave(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction@)"/>
+            </summary>
+            <param name="context">The context of the <see cref="T:HotChocolate.Data.Projections.IProjectionVisitorContext"/></param>
+            <param name="selection">The current selection</param>
+            <returns>
+            The instance of <see cref="!:TContext"/> that is used in TryHandleLeave
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.TryHandleLeave(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction@)">
+            <summary>
+            Tries to apply projection to the field. This method is called after
+            <see cref="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.OnBeforeLeave(`0,HotChocolate.Execution.Processing.ISelection)"/> and before
+            <see cref="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.OnAfterLeave(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction)"/>
+            </summary>
+            <param name="context">The context of the <see cref="T:HotChocolate.Data.Projections.IProjectionVisitorContext"/></param>
+            <param name="selection">The current selection</param>
+            <param name="action">
+            The <see cref="T:HotChocolate.Data.Projections.ISelectionVisitorAction"/> that the visitor should
+            continue with
+            </param>
+            <returns>If <c>true</c> is returned the action is used for further processing</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.OnAfterLeave(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction)">
+            <summary>
+            This method is called after the visitor calls
+            <see cref="M:HotChocolate.Data.Projections.IProjectionFieldHandler`1.TryHandleLeave(`0,HotChocolate.Execution.Processing.ISelection,HotChocolate.Data.Projections.ISelectionVisitorAction@)"/>
+            </summary>
+            <param name="context">The context of the <see cref="T:HotChocolate.Data.Projections.IProjectionVisitorContext"/></param>
+            <param name="result">The action produced by TryHandleLeave</param>
+            <param name="selection">The current selection</param>
+            <returns>
+            The instance of <see cref="!:TContext"/> that is used in TryHandleLeave
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionOptimizer.CanHandle(HotChocolate.Execution.Processing.ISelection)">
+            <summary>
+            Tests if this optimizer can handle a selection If it can handle the selection it
+            will be attached to the compiled selection set on the
+            type <see cref="T:HotChocolate.Data.Projections.ProjectionSelection"/>
+            </summary>
+            <param name="selection">The selection to test for</param>
+            <returns>Returns true if the selection can be handled</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Projections.IProjectionOptimizer.RewriteSelection(HotChocolate.Execution.Processing.SelectionOptimizerContext,HotChocolate.Execution.Processing.Selection)">
+            <summary>
+            Rewrites a selection. In case nothing is rewritten, the <paramref name="selection"/>
+            is returned
+            </summary>
+            <param name="context">The context of the <see cref="T:HotChocolate.Data.Projections.IProjectionVisitorContext"/></param>
+            <param name="selection">The current selection</param>
+            <returns>
+            Returns either the original <paramref name="selection"/> or a rewritten version of it
+            </returns>
+        </member>
+        <member name="T:HotChocolate.Data.Projections.ProjectionScope`1">
+            <summary>
+            A logical scope of the projection visitor.
+            </summary>
+            <typeparam name="T">The type of the filter definition</typeparam>
+        </member>
+        <member name="P:HotChocolate.Data.Projections.ProjectionScope`1.Instance">
+            <summary>
+             Stores the current instance. In case of an expression this would be x.Foo.Bar
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.QueryableExecutable`1.Source">
+            <summary>
+            The current state of the executable
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.QueryableExecutable`1.InMemory">
+            <summary>
+            Is true if <see cref="P:HotChocolate.Data.QueryableExecutable`1.Source"/> source is a in memory query and
+            false if it is a database query
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.QueryableExecutable`1.WithSource(System.Linq.IQueryable{`0})">
+            <summary>
+            Returns a new enumerable executable with the provided source
+            </summary>
+            <param name="source">The source that should be set</param>
+            <returns>The new instance of an enumerable executable</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.ISortConvention">
+            <summary>
+            The sort convention provides defaults for inferring sorting fields.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.GetTypeName(System.Type)">
+            <summary>
+            Gets the GraphQL type name from a runtime type.
+            </summary>
+            <param name="runtimeType">
+            The runtime type.
+            </param>
+            <returns>
+            Returns the GraphQL type name that was inferred from the <paramref name="runtimeType"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.GetTypeDescription(System.Type)">
+            <summary>
+            Gets the GraphQL type description from a runtime type.
+            </summary>
+            <param name="runtimeType">
+            The runtime type.
+            </param>
+            <returns>
+            Returns the GraphQL type description that was
+            inferred from the <paramref name="runtimeType"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.GetFieldName(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the GraphQL field name from a <see cref="T:System.Reflection.MemberInfo"/>.
+            </summary>
+            <param name="member">
+            The member from which a field shall be inferred.
+            </param>
+            <returns>
+            Returns the GraphQL field name that was inferred from the <see cref="T:System.Reflection.MemberInfo"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.GetFieldDescription(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the GraphQL field description from a <see cref="T:System.Reflection.MemberInfo"/>.
+            </summary>
+            <param name="member">
+            The member from which a field shall be inferred.
+            </param>
+            <returns>
+            Returns the GraphQL field description that was inferred from the
+            <see cref="T:System.Reflection.MemberInfo"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.GetFieldType(System.Reflection.MemberInfo)">
+            <summary>
+            Extracts the field type from a <see cref="T:System.Reflection.MemberInfo"/>.
+            </summary>
+            <param name="member">
+            The member from which a field shall be inferred.
+            </param>
+            <returns>
+            Returns a <see cref="!:ClrTypeReference"/> that represents the field type.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.GetOperationName(System.Int32)">
+            <summary>
+            Gets the operation name for the provided <paramref name="operationId"/>.
+            </summary>
+            <param name="operationId">
+            The internal operation ID.
+            </param>
+            <returns>
+            Returns the operation name.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.GetOperationDescription(System.Int32)">
+            <summary>
+            Gets the operation description for the provided <paramref name="operationId"/>.
+            </summary>
+            <param name="operationId">
+            The internal operation ID.
+            </param>
+            <returns>
+            Returns the operation description.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.GetArgumentName">
+            <summary>
+            Gets the sort argument name.
+            </summary>
+            <returns>
+            Returns the sort argument name.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.ApplyConfigurations(HotChocolate.Types.Descriptors.ITypeReference,HotChocolate.Data.Sorting.ISortInputTypeDescriptor)">
+            <summary>
+            Applies configurations to a sort type.
+            </summary>
+            <param name="typeReference">
+            The type reference representing the type.
+            </param>
+            <param name="descriptor">
+            The descriptor to which the configurations shall be applied to.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.ApplyConfigurations(HotChocolate.Types.Descriptors.ITypeReference,HotChocolate.Data.Sorting.ISortEnumTypeDescriptor)">
+            <summary>
+            Applies configurations to a sort enum type.
+            </summary>
+            <param name="typeReference">
+            The type reference representing the enum type.
+            </param>
+            <param name="descriptor">
+            The descriptor to which the configurations shall be applied to.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.CreateExecutor``1">
+            <summary>
+            Creates a middleware that represents the sort execution logic
+            for the specified entity type.
+            </summary>
+            <typeparam name="TEntityType">
+            The entity type for which an sort executor shall be created.
+            </typeparam>
+            <returns>
+            Returns a field middleware which represents the sort execution logic
+            for the specified entity type.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConvention.ConfigureField(HotChocolate.Types.IObjectFieldDescriptor)">
+            <summary>
+            Configures the field where the filters are applied. This can be used to add context
+            data to the field.
+            </summary>
+            <param name="fieldDescriptor">
+            the field descriptor where the filtering is applied
+            </param>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.ISortConventionDescriptor">
+            <summary>
+            This descriptor is used to configure a <see cref="T:HotChocolate.Data.Sorting.SortConvention"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.Operation(System.Int32)">
+            <summary>
+            Specifies an operation.
+            </summary>
+            <param name="operationId">
+            The internal ID that is used to identify the operation.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.DefaultBinding``1">
+            <summary>
+            Binds a runtime type to all field of a <see cref="T:HotChocolate.Data.Sorting.SortInputType"/> that do not have a
+            more specific binding.
+            </summary>
+            <typeparam name="TSortType">The GraphQL sort type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.BindRuntimeType``2">
+            <summary>
+            Binds a runtime type to a <see cref="T:HotChocolate.Data.Sorting.SortInputType"/> so that the convention
+            can infer the GraphQL type representation from internal runtime types
+            like <see cref="T:System.String"/>.
+            </summary>
+            <typeparam name="TRuntimeType">The runtime type.</typeparam>
+            <typeparam name="TSortType">The GraphQL sort type or the enum type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.BindRuntimeType(System.Type,System.Type)">
+            <summary>
+            Binds a runtime type to a <see cref="T:HotChocolate.Data.Sorting.SortInputType"/> so that the convention
+            can infer the GraphQL type representation from internal runtime types
+            like <see cref="T:System.String"/>.
+            </summary>
+            <param name="runtimeType">The runtime type.</param>
+            <param name="sortType">GraphQL sort type or the enum type</param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.ConfigureEnum``1(HotChocolate.Data.Sorting.ConfigureSortEnumType)">
+            <summary>
+            Provides additional configuration for a sort enum type.
+            </summary>
+            <param name="configure">
+            The configuration that shall be applied to the specified sort type.
+            </param>
+            <typeparam name="TSortEnumType">
+            The sort type for which additional configuration shall be provided.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.Configure``1(HotChocolate.Data.Sorting.ConfigureSortInputType)">
+            <summary>
+            Provides additional configuration for a sort type.
+            </summary>
+            <param name="configure">
+            The configuration that shall be applied to the specified sort type.
+            </param>
+            <typeparam name="TSortType">
+            The sort type for which additional configuration shall be provided.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.Configure``2(HotChocolate.Data.Sorting.ConfigureSortInputType{``1})">
+            <summary>
+            Provides additional configuration for a sort type.
+            </summary>
+            <param name="configure">
+            The configuration that shall be applied to the specified sort type.
+            </param>
+            <typeparam name="TSortType">
+            The sort type for which additional configuration shall be provided.
+            </typeparam>
+            <typeparam name="TRuntimeType">
+            The underlying runtime type of the sort type.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.Provider``1">
+            <summary>
+            Specifies the sort provider.
+            </summary>
+            <typeparam name="TProvider">The sort provider type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.Provider``1(``0)">
+            <summary>
+            Specifies the sort provider.
+            </summary>
+            <param name="provider">The concrete sort provider that shall be used.</param>
+            <typeparam name="TProvider">The sort provider type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.Provider(System.Type)">
+            <summary>
+            Specifies the sort provider.
+            </summary>
+            <param name="provider">The sort provider type.</param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.ArgumentName(HotChocolate.NameString)">
+            <summary>
+            Defines the argument name of the sort used by
+            <see cref="!:SortObjectFieldDescriptorExtensions.UseSorting"/>
+            </summary>
+            <param name="argumentName">The argument name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="argumentName"/> is <c>null</c> or
+            <see cref="F:System.String.Empty"/>.
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.AddProviderExtension``1">
+            <summary>
+            Add a extensions that is applied to <see cref="T:HotChocolate.Data.Sorting.SortProvider`1"/>
+            </summary>
+            <typeparam name="TExtension">The sort provider extension type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortConventionDescriptor.AddProviderExtension``1(``0)">
+            <summary>
+            Add a extensions that is applied to <see cref="T:HotChocolate.Data.Sorting.SortProvider`1"/>
+            </summary>
+            <param name="provider">
+            The concrete sort provider extension that shall be used.
+            </param>
+            <typeparam name="TExtension">The sort provider extension type.</typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortOperationConventionDescriptor.Name(System.String)">
+            <summary>
+            Specify the name of the operation.
+            </summary>
+            <param name="name">
+            The operation name.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortOperationConventionDescriptor.Description(System.String)">
+            <summary>
+            Specify the description of the operation
+            </summary>
+            <param name="description">
+            The operation description
+            </param>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.SortConvention">
+            <summary>
+            The sort convention provides defaults for inferring sorting fields.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConvention.GetTypeName(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConvention.GetTypeDescription(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConvention.GetFieldName(System.Reflection.MemberInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConvention.GetFieldDescription(System.Reflection.MemberInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConvention.GetFieldType(System.Reflection.MemberInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConvention.GetOperationName(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConvention.GetOperationDescription(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConvention.GetArgumentName">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConvention.ApplyConfigurations(HotChocolate.Types.Descriptors.ITypeReference,HotChocolate.Data.Sorting.ISortInputTypeDescriptor)">
+            <inheritdoc cref="T:HotChocolate.Data.Sorting.ISortConvention"/>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.Operation(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.DefaultBinding``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.BindRuntimeType``2">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.BindRuntimeType(System.Type,System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.Configure``1(HotChocolate.Data.Sorting.ConfigureSortInputType)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.Configure``2(HotChocolate.Data.Sorting.ConfigureSortInputType{``1})">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.ConfigureEnum``1(HotChocolate.Data.Sorting.ConfigureSortEnumType)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.Provider``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.Provider``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.Provider(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.ArgumentName(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortConventionDescriptor.New(HotChocolate.Types.Descriptors.IDescriptorContext,System.String)">
+            <summary>
+            Creates a new descriptor for <see cref="T:HotChocolate.Data.Sorting.SortConvention"/>
+            </summary>
+            <param name="context">The descriptor context.</param>
+            <param name="scope">The scope</param>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.SortConventionExtension">
+            <summary>
+            The sort convention extensions can be used to extend a sort convention.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortOperationConventionDescriptor.Name(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortOperationConventionDescriptor.Description(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.Expressions.QueryableSortExtensions">
+            <summary>
+            Extensions for sorting for <see cref="T:System.Collections.Generic.IEnumerable`1"/> and <see cref="T:System.Linq.IQueryable`1"/>
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.Expressions.QueryableSortExtensions.Sort``1(System.Linq.IQueryable{``0},HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Sorts the selection set of the request onto the queryable.
+            </summary>
+            <param name="queryable">The queryable</param>
+            <param name="context">
+            The resolver context of the resolver that is annotated with UseSorting
+            </param>
+            <returns>The sorted queryable</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.Expressions.QueryableSortExtensions.Sort``1(System.Collections.Generic.IEnumerable{``0},HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Sorts the selection set of the request onto the enumerable.
+            </summary>
+            <param name="enumerable">The enumerable</param>
+            <param name="context">
+            The resolver context of the resolver that is annotated with UseSorting
+            </param>
+            <returns>The sorted enumerable</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.Expressions.QueryableSortExtensions.Sort``1(HotChocolate.Data.QueryableExecutable{``0},HotChocolate.Resolvers.IResolverContext)">
+            <summary>
+            Sorts the selection set of the request onto the enumerable.
+            </summary>
+            <param name="enumerable">The enumerable</param>
+            <param name="context">
+            The resolver context of the resolver that is annotated with UseSorting
+            </param>
+            <returns>The sorted enumerable</returns>
+        </member>
+        <member name="P:HotChocolate.Data.Sorting.ISortField.DeclaringType">
+            <summary>
+            The type which declares this field.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortEnumTypeDescriptor.SyntaxNode(HotChocolate.Language.EnumTypeDefinitionNode)">
+            <summary>
+            Associates the enum type with a syntax node
+            of the parsed GraphQL SDL.
+            </summary>
+            <param name="enumTypeDefinition">
+            The the type definition node.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortEnumTypeDescriptor.Name(HotChocolate.NameString)">
+            <summary>
+            Defines the name the enum type shall have.
+            </summary>
+            <param name="value">
+            The name value.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortEnumTypeDescriptor.Description(System.String)">
+            <summary>
+            Defines the description that the enum type shall have.
+            </summary>
+            <param name="value">
+            The description value.
+            </param>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.ISortInputType">
+            <summary>
+            Specifies a sort input type.
+            </summary>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.ISortInputTypeDescriptor">
+            <summary>
+            The sort input descriptor allows to configure a <see cref="T:HotChocolate.Data.Sorting.SortInputType"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor.Name(HotChocolate.NameString)">
+            <summary>
+            Defines the name of the <see cref="T:HotChocolate.Data.Sorting.SortInputType`1"/>.
+            </summary>
+            <param name="value">The sort type name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c> or
+            <see cref="F:System.String.Empty"/>.
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor.Description(System.String)">
+             <summary>
+             Adds explanatory text of the <see cref="T:HotChocolate.Data.Sorting.SortInputType`1"/>
+             that can be accessed via introspection.
+             </summary>
+             <param name="value">The sort type description.</param>
+            
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor.Field(HotChocolate.NameString)">
+            <summary>
+            Defines a <see cref="T:HotChocolate.Data.Sorting.SortField" /> with the specified name.
+            </summary>
+            <param name="name">
+            The name of the field.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor.Ignore(HotChocolate.NameString)">
+            <summary>
+            Ignore the specified property.
+            </summary>
+            <param name="name">
+            The name of the field.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor.Directive``1(``0)">
+            <summary>
+            Adds a directive to this sort input type.
+            </summary>
+            <param name="directive">
+            The directive.
+            </param>
+            <typeparam name="TDirective">
+            The type of the directive.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor.Directive``1">
+            <summary>
+            Adds a directive to this sort input type.
+            </summary>
+            <typeparam name="TDirective">
+            The type of the directive.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor.Directive(HotChocolate.NameString,HotChocolate.Language.ArgumentNode[])">
+            <summary>
+            Adds a directive to this sort input type.
+            </summary>
+            <param name="name">
+            The name of the directive.
+            </param>
+            <param name="arguments">
+            The directive argument values.
+            </param>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1">
+            <summary>
+            The sort input descriptor allows to configure a <see cref="T:HotChocolate.Data.Sorting.SortInputType"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.Name(HotChocolate.NameString)">
+            <summary>
+            Defines the name of the <see cref="T:HotChocolate.Data.Sorting.SortInputType`1"/>.
+            </summary>
+            <param name="value">The sort type name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c> or
+            <see cref="F:System.String.Empty"/>.
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.Description(System.String)">
+             <summary>
+             Adds explanatory text of the <see cref="T:HotChocolate.Data.Sorting.SortInputType`1"/>
+             that can be accessed via introspection.
+             </summary>
+             <param name="value">The sort type description.</param>
+            
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.BindFields(HotChocolate.Types.BindingBehavior)">
+             <summary>
+             <para>Defines the sort binding behavior.</para>
+             <para>
+             The default binding behavior is set to
+             <see cref="F:HotChocolate.Types.BindingBehavior.Implicit"/>.
+             </para>
+             </summary>
+             <param name="bindingBehavior">
+             The binding behavior.
+            
+             Implicit:
+             The sort type descriptor will try to infer sorting
+             from the specified <typeparamref name="T"/>.
+            
+             Explicit:
+             All sorting fields have to be specified explicitly via one of the `Sort`
+             methods.
+             </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.BindFieldsExplicitly">
+            <summary>
+            Defines that all sorting fields have to be specified explicitly.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.BindFieldsImplicitly">
+            <summary>
+            The sort type will will add
+            sorting fields for all compatible fields.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.Field``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Defines a <see cref="T:HotChocolate.Data.Sorting.SortField" /> that binds to the specified property.
+            </summary>
+            <param name="propertyOrMember">
+            The property to which a sort field shall be bound.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.Ignore(HotChocolate.NameString)">
+            <summary>
+            Ignore the specified property.
+            </summary>
+            <param name="name">
+            The name of the field.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.Ignore(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Ignore the specified property.
+            </summary>
+            <param  name="propertyOrMember">
+            The property that shall be ignored.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.Directive``1(``0)">
+            <summary>
+            Adds a directive to this sort input type.
+            </summary>
+            <param name="directive">
+            The directive.
+            </param>
+            <typeparam name="TDirective">
+            The type of the directive.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.Directive``1">
+            <summary>
+            Adds a directive to this sort input type.
+            </summary>
+            <typeparam name="TDirective">
+            The type of the directive.
+            </typeparam>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortInputTypeDescriptor`1.Directive(HotChocolate.NameString,HotChocolate.Language.ArgumentNode[])">
+            <summary>
+            Adds a directive to this sort input type.
+            </summary>
+            <param name="name">
+            The name of the directive.
+            </param>
+            <param name="arguments">
+            The directive argument values.
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor.Name(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor.Description(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor.Field(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor.Ignore(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor.Directive``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor.Directive``1">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor.Directive(HotChocolate.NameString,HotChocolate.Language.ArgumentNode[])">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor`1.Name(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor`1.Description(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor`1.BindFields(HotChocolate.Types.BindingBehavior)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor`1.BindFieldsExplicitly">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor`1.BindFieldsImplicitly">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor`1.Field``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor`1.Ignore(HotChocolate.NameString)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortInputTypeDescriptor`1.Ignore(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortFieldHandler.CanHandle(HotChocolate.Configuration.ITypeCompletionContext,HotChocolate.Data.Sorting.ISortInputTypeDefinition,HotChocolate.Data.Sorting.ISortFieldDefinition)">
+            <summary>
+            Tests if this field handler can handle a field If it can handle the field it
+            will be attached to the <see cref="T:HotChocolate.Data.Sorting.SortField"/>
+            </summary>
+            <param name="context">The discovery context of the schema</param>
+            <param name="typeDefinition">The definition of the declaring type of the field</param>
+            <param name="fieldDefinition">The definition of the field</param>
+            <returns>Returns true if the field can be handled</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortFieldHandler`1.TryHandleEnter(`0,HotChocolate.Data.Sorting.ISortField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <summary>
+            This method is called when the <see cref="T:HotChocolate.Data.Sorting.SortVisitor`2"/> encounters a
+            field
+            </summary>
+            <param name="context">The <see cref="T:HotChocolate.Data.Sorting.ISortVisitorContext`1"/> of the visitor</param>
+            <param name="field">The field that is currently being visited</param>
+            <param name="node">The value node of this field</param>
+            <param name="action">
+            The <see cref="T:HotChocolate.Language.Visitors.ISyntaxVisitorAction"/> that the visitor should
+            continue with
+            </param>
+            <returns>If <c>true</c> is returned the action is used for further processing</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortFieldHandler`1.TryHandleLeave(`0,HotChocolate.Data.Sorting.ISortField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <summary>
+            This method is called when the <see cref="T:HotChocolate.Data.Sorting.SortVisitor`2"/> leaves a
+            field
+            </summary>
+            <param name="context">The <see cref="T:HotChocolate.Data.Sorting.ISortVisitorContext`1"/> of the visitor</param>
+            <param name="field">The field that is currently being visited</param>
+            <param name="node">The value node of this field</param>
+            <param name="action">
+            The <see cref="T:HotChocolate.Language.Visitors.ISyntaxVisitorAction"/> that the visitor should
+            continue with
+            </param>
+            <returns>If <c>true</c> is returned the action is used for further processing</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.ISortOperationHandler">
+            <summary>
+            Represents a handler that can be bound to a <see cref="T:HotChocolate.Data.Sorting.SortField"/>. The handler is
+            executed during the visitation of a input object.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortOperationHandler.CanHandle(HotChocolate.Configuration.ITypeCompletionContext,HotChocolate.Types.Descriptors.Definitions.EnumTypeDefinition,HotChocolate.Data.Sorting.SortEnumValueDefinition)">
+            <summary>
+            Tests if this operation handler can handle a field If it can handle the field it
+            will be attached to the <see cref="T:HotChocolate.Data.Sorting.SortField"/>
+            </summary>
+            <param name="context">The discovery context of the schema</param>
+            <param name="typeDefinition">The definition of the declaring type of the field</param>
+            <param name="valueDefinition">The definition of the field</param>
+            <returns>Returns true if the field can be handled</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.ISortOperationHandler`1">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortOperationHandler`1.TryHandleEnter(`0,HotChocolate.Data.Sorting.ISortField,HotChocolate.Data.Sorting.ISortEnumValue,HotChocolate.Language.EnumValueNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <summary>
+            This method is called when the <see cref="T:HotChocolate.Data.Sorting.SortVisitor`2"/> encounters a
+            field
+            </summary>
+            <param name="context">The <see cref="T:HotChocolate.Data.Sorting.ISortVisitorContext`1"/> of the visitor</param>
+            <param name="field">The field that is currently being visited</param>
+            <param name="enumValue">The sort value of the field</param>
+            <param name="valueNode">The value node of the field</param>
+            <param name="action">
+            The <see cref="T:HotChocolate.Language.Visitors.ISyntaxVisitorAction"/> that the visitor should
+            continue with
+            </param>
+            <returns>If <c>true</c> is returned the action is used for further processing</returns>
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.ISortOperationHandler`2">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.ISortProvider.ConfigureField(HotChocolate.NameString,HotChocolate.Types.IObjectFieldDescriptor)">
+            <summary>
+            Configures the field where the filters are applied. This can be used to add context
+            data to the field.
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Sorting.ISortVisitorContext`1.Operations">
+            <summary>
+             Stores all sort operations
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.Sorting.ISortVisitorContext`1.Instance">
+            <summary>
+             Stores the current instance. In case of an expression this would be x.Foo.Bar
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortFieldHandler`2.TryHandleEnter(`0,HotChocolate.Data.Sorting.ISortField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortFieldHandler`2.TryHandleLeave(`0,HotChocolate.Data.Sorting.ISortField,HotChocolate.Language.ObjectFieldNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortFieldHandler`2.CanHandle(HotChocolate.Configuration.ITypeCompletionContext,HotChocolate.Data.Sorting.ISortInputTypeDefinition,HotChocolate.Data.Sorting.ISortFieldDefinition)">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.SortOperationHandler`2">
+            <summary>
+            Represents a handler that can be bound to a <see cref="T:HotChocolate.Data.Sorting.SortField"/>. The handler is
+            executed during the visitation of a input object.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortOperationHandler`2.TryHandleEnter(`0,HotChocolate.Data.Sorting.ISortField,HotChocolate.Data.Sorting.ISortEnumValue,HotChocolate.Language.EnumValueNode,HotChocolate.Language.Visitors.ISyntaxVisitorAction@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortOperationHandler`2.CanHandle(HotChocolate.Configuration.ITypeCompletionContext,HotChocolate.Types.Descriptors.Definitions.EnumTypeDefinition,HotChocolate.Data.Sorting.SortEnumValueDefinition)">
+            <inheritdoc />
+        </member>
+        <member name="T:HotChocolate.Data.Sorting.SortProvider`1">
+            <summary>
+            A <see cref="T:HotChocolate.Data.Sorting.SortProvider`1"/> translates a incoming query to another
+            object structure at runtime
+            </summary>
+            <typeparam name="TContext">The type of the context</typeparam>
+        </member>
+        <member name="P:HotChocolate.Data.Sorting.SortProvider`1.FieldHandlers">
+            <inheritdoc />
+        </member>
+        <member name="P:HotChocolate.Data.Sorting.SortProvider`1.OperationHandlers">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortProvider`1.CreateDefinition(HotChocolate.Types.Descriptors.IConventionContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortProvider`1.Complete(HotChocolate.Types.Descriptors.IConventionContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortProvider`1.Configure(HotChocolate.Data.Sorting.ISortProviderDescriptor{`0})">
+            <summary>
+            This method is called on initialization of the provider but before the provider is
+            completed. The default implementation of this method does nothing. It can be overriden
+            by a derived class such that the provider can be further configured before it is
+            completed
+            </summary>
+            <param name="descriptor">
+            The descriptor that can be used to configure the provider
+            </param>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortProvider`1.CreateExecutor``1(HotChocolate.NameString)">
+            <summary>
+            Creates the executor that is attached to the middleware pipeline of the field
+            </summary>
+            <param name="argumentName">
+            The argument name specified in the <see cref="T:HotChocolate.Data.Sorting.SortConvention"/>
+            </param>
+            <typeparam name="TEntityType">The runtime type of the entity</typeparam>
+            <returns>A middleware</returns>
+        </member>
+        <member name="M:HotChocolate.Data.Sorting.SortProvider`1.ConfigureField(HotChocolate.NameString,HotChocolate.Types.IObjectFieldDescriptor)">
+            <summary>
+            Is called on each field that sorting is applied to. This method can be used to
+            customize a field.
+            </summary>
+            <param name="argumentName">
+            The argument name specified in the <see cref="T:HotChocolate.Data.Sorting.SortConvention"/>
+            </param>
+            <param name="descriptor">The descriptor of the field</param>
+        </member>
+        <member name="T:HotChocolate.Data.UseSortingAttribute">
+            <summary>
+            Registers the middleware and adds the arguments for sorting
+            </summary>
+        </member>
+        <member name="P:HotChocolate.Data.UseSortingAttribute.Type">
+            <summary>
+            Gets or sets the sort type which specifies the sort object structure.
+            </summary>
+            <value>The sort type</value>
+        </member>
+        <member name="P:HotChocolate.Data.UseSortingAttribute.Scope">
+            <summary>
+            Sets the scope for the convention
+            </summary>
+            <value>The name of the scope</value>
+        </member>
+        <member name="M:HotChocolate.Types.FilterObjectFieldDescriptorExtensions.UseFiltering(HotChocolate.Types.IObjectFieldDescriptor,System.String)">
+            <summary>
+            Registers the middleware and adds the arguments for filtering
+            </summary>
+            <param name="descriptor">The field descriptor where the arguments and middleware are
+            applied to</param>
+            <param name="scope">Specifies what scope should be used for the
+            <see cref="T:HotChocolate.Data.Filters.FilterConvention" /></param>
+        </member>
+        <member name="M:HotChocolate.Types.FilterObjectFieldDescriptorExtensions.UseFiltering``1(HotChocolate.Types.IObjectFieldDescriptor,System.String)">
+            <summary>
+            Registers the middleware and adds the arguments for filtering
+            </summary>
+            <param name="descriptor">The field descriptor where the arguments and middleware are
+            applied to</param>
+            <param name="scope">Specifies what scope should be used for the
+            <see cref="T:HotChocolate.Data.Filters.FilterConvention" /></param>
+            <typeparam name="T">Either a runtime type or a <see cref="T:HotChocolate.Data.Filters.FilterInputType"/></typeparam>
+        </member>
+        <member name="M:HotChocolate.Types.FilterObjectFieldDescriptorExtensions.UseFiltering``1(HotChocolate.Types.IObjectFieldDescriptor,System.Action{HotChocolate.Data.Filters.IFilterInputTypeDescriptor{``0}},System.String)">
+            <summary>
+            Registers the middleware and adds the arguments for filtering
+            </summary>
+            <param name="descriptor">The field descriptor where the arguments and middleware are
+            applied to</param>
+            <param name="configure">Configures the filter input types that is used by the field
+            </param>
+            <param name="scope">Specifies what scope should be used for the
+            <see cref="T:HotChocolate.Data.Filters.FilterConvention" /></param>
+        </member>
+        <member name="M:HotChocolate.Types.FilterObjectFieldDescriptorExtensions.UseFiltering(HotChocolate.Types.IObjectFieldDescriptor,System.Type,System.String)">
+            <summary>
+            Registers the middleware and adds the arguments for filtering
+            </summary>
+            <param name="descriptor">The field descriptor where the arguments and middleware are
+            applied to</param>
+            <param name="type">Either a runtime type or a <see cref="T:HotChocolate.Data.Filters.FilterInputType"/></param>
+            <param name="scope">Specifies what scope should be used for the
+            <see cref="T:HotChocolate.Data.Filters.FilterConvention" /></param>
+        </member>
+        <member name="M:HotChocolate.Types.ProjectionObjectFieldDescriptorExtensions.IsProjected(HotChocolate.Types.IObjectFieldDescriptor,System.Boolean)">
+             <summary>
+             Configure if this field should be projected by <see cref="M:HotChocolate.Types.ProjectionObjectFieldDescriptorExtensions.UseProjection``1(HotChocolate.Types.IObjectFieldDescriptor,System.String)"/> or if it
+             should be skipped
+            
+             if <paramref name="isProjected"/> is false, this field will never be projected even if
+             it is in the selection set
+             if <paramref name="isProjected"/> is true, this field will always be projected even it
+             it is not in the selection set
+             </summary>
+             <param name="descriptor">The descriptor</param>
+             <param name="isProjected">
+             If false the field will never be projected, if true it will always be projected
+             </param>
+             <returns>The descriptor passed in by <paramref name="descriptor"/></returns>
+        </member>
+        <member name="M:HotChocolate.Types.ProjectionObjectFieldDescriptorExtensions.UseProjection(HotChocolate.Types.IObjectFieldDescriptor,System.String)">
+            <summary>
+            Projects the selection set of the request onto the field. Registers a middleware that
+            uses the registered <see cref="T:HotChocolate.Data.Projections.ProjectionConvention"/> to apply the projections
+            </summary>
+            <param name="descriptor">The descriptor</param>
+            <param name="scope">
+            Specify which <see cref="T:HotChocolate.Data.Projections.ProjectionConvention"/> is used, based on the value passed in
+            <see cref="M:HotChocolate.ProjectionsSchemaBuilderExtensions.AddProjections``1(HotChocolate.ISchemaBuilder,System.String)"/>
+            </param>
+            <returns>The descriptor passed in by <paramref name="descriptor"/></returns>
+            <exception cref="T:System.ArgumentNullException">
+            In case the descriptor is null
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Types.ProjectionObjectFieldDescriptorExtensions.UseProjection``1(HotChocolate.Types.IObjectFieldDescriptor,System.String)">
+            <summary>
+            Projects the selection set of the request onto the field. Registers a middleware that
+            uses the registered <see cref="T:HotChocolate.Data.Projections.ProjectionConvention"/> to apply the projections
+            </summary>
+            <param name="descriptor">The descriptor</param>
+            <param name="scope">
+            Specify which <see cref="T:HotChocolate.Data.Projections.ProjectionConvention"/> is used, based on the value passed in
+            <see cref="M:HotChocolate.ProjectionsSchemaBuilderExtensions.AddProjections``1(HotChocolate.ISchemaBuilder,System.String)"/>
+            </param>
+            <typeparam name="T">
+            The <see cref="T:System.Type"/> of the resolved field
+            </typeparam>
+            <returns>The descriptor passed in by <paramref name="descriptor"/></returns>
+            <exception cref="T:System.ArgumentNullException">
+            In case the descriptor is null
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Types.ProjectionObjectFieldDescriptorExtensions.UseProjection(HotChocolate.Types.IObjectFieldDescriptor,System.Type,System.String)">
+            <summary>
+            Projects the selection set of the request onto the field. Registers a middleware that
+            uses the registered <see cref="T:HotChocolate.Data.Projections.ProjectionConvention"/> to apply the projections
+            </summary>
+            <param name="descriptor">The descriptor</param>
+            <param name="scope">
+            Specify which <see cref="T:HotChocolate.Data.Projections.ProjectionConvention"/> is used, based on the value passed in
+            <see cref="M:HotChocolate.ProjectionsSchemaBuilderExtensions.AddProjections``1(HotChocolate.ISchemaBuilder,System.String)"/>
+            </param>
+            <param name="type">
+            The <see cref="T:System.Type"/> of the resolved field
+            </param>
+            <returns>The descriptor passed in by <paramref name="descriptor"/></returns>
+            <exception cref="T:System.ArgumentNullException">
+            In case the descriptor is null
+            </exception>
+        </member>
+        <member name="M:HotChocolate.Types.SortObjectFieldDescriptorExtensions.UseSorting(HotChocolate.Types.IObjectFieldDescriptor,System.String)">
+            <summary>
+            Registers the middleware and adds the arguments for sorting
+            </summary>
+            <param name="descriptor">The field descriptor where the arguments and middleware are
+            applied to</param>
+            <param name="scope">Specifies what scope should be used for the
+            <see cref="T:HotChocolate.Data.Sorting.SortConvention" /></param>
+        </member>
+        <member name="M:HotChocolate.Types.SortObjectFieldDescriptorExtensions.UseSorting``1(HotChocolate.Types.IObjectFieldDescriptor,System.String)">
+            <summary>
+            Registers the middleware and adds the arguments for sorting
+            </summary>
+            <param name="descriptor">The field descriptor where the arguments and middleware are
+            applied to</param>
+            <param name="scope">Specifies what scope should be used for the
+            <see cref="T:HotChocolate.Data.Sorting.SortConvention" /></param>
+            <typeparam name="T">Either a runtime type or a <see cref="T:HotChocolate.Data.Sorting.SortInputType"/></typeparam>
+        </member>
+        <member name="M:HotChocolate.Types.SortObjectFieldDescriptorExtensions.UseSorting(HotChocolate.Types.IObjectFieldDescriptor,System.Type,System.String)">
+            <summary>
+            Registers the middleware and adds the arguments for sorting
+            </summary>
+            <param name="descriptor">The field descriptor where the arguments and middleware are
+            applied to</param>
+            <param name="type">Either a runtime type or a <see cref="T:HotChocolate.Data.Sorting.SortInputType"/></param>
+            <param name="scope">Specifies what scope should be used for the
+            <see cref="T:HotChocolate.Data.Sorting.SortConvention" /></param>
+        </member>
+        <member name="T:HotChocolate.FilterSchemaBuilderExtensions">
+            <summary>
+            Provides filtering extensions for the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.FilterSchemaBuilderExtensions.AddFiltering(HotChocolate.ISchemaBuilder,System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.FilterSchemaBuilderExtensions.AddFiltering(HotChocolate.ISchemaBuilder,System.Action{HotChocolate.Data.Filters.IFilterConventionDescriptor},System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </param>
+            <param name="configure">
+            Configures the convention.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.FilterSchemaBuilderExtensions.AddFiltering``1(HotChocolate.ISchemaBuilder,System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <typeparam name="TConvention">
+            The concrete filter convention type.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:HotChocolate.ProjectionsSchemaBuilderExtensions">
+            <summary>
+            Provides filtering extensions for the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.ProjectionsSchemaBuilderExtensions.AddProjections(HotChocolate.ISchemaBuilder)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.ProjectionsSchemaBuilderExtensions.AddProjections(HotChocolate.ISchemaBuilder,System.Action{HotChocolate.Data.Projections.IProjectionConventionDescriptor},System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </param>
+            <param name="configure">
+            Configures the convention.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.ProjectionsSchemaBuilderExtensions.AddProjections``1(HotChocolate.ISchemaBuilder,System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <typeparam name="TConvention">
+            The concrete filter convention type.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:HotChocolate.SortingSchemaBuilderExtensions">
+            <summary>
+            Provides Sorting extensions for the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:HotChocolate.SortingSchemaBuilderExtensions.AddSorting(HotChocolate.ISchemaBuilder,System.String)">
+            <summary>
+            Adds Sorting support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </param>
+            <param name="name">
+            The sort convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.SortingSchemaBuilderExtensions.AddSorting(HotChocolate.ISchemaBuilder,System.Action{HotChocolate.Data.Sorting.ISortConventionDescriptor},System.String)">
+            <summary>
+            Adds Sorting support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </param>
+            <param name="configure">
+            Configures the convention.
+            </param>
+            <param name="name">
+            The sort convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:HotChocolate.SortingSchemaBuilderExtensions.AddSorting``1(HotChocolate.ISchemaBuilder,System.String)">
+            <summary>
+            Adds Sorting support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </param>
+            <param name="name">
+            The sort convention name.
+            </param>
+            <typeparam name="TConvention">
+            The concrete sort convention type.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.ISchemaBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions">
+            <summary>
+            Provides data extensions for the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions.AddFiltering(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions.AddFiltering(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.Action{HotChocolate.Data.Filters.IFilterConventionDescriptor},System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="configure">
+            Configures the convention.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions.AddFiltering``1(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <typeparam name="TConvention">
+            The concrete filter convention type.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions.AddSorting(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions.AddSorting(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.Action{HotChocolate.Data.Sorting.ISortConventionDescriptor},System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="configure">
+            Configures the convention.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions.AddSorting``1(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <typeparam name="TConvention">
+            The concrete filter convention type.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions.AddProjections(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions.AddProjections(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.Action{HotChocolate.Data.Projections.IProjectionConventionDescriptor},System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="configure">
+            Configures the convention.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HotChocolateDataRequestBuilderExtensions.AddProjections``1(HotChocolate.Execution.Configuration.IRequestExecutorBuilder,System.String)">
+            <summary>
+            Adds filtering support.
+            </summary>
+            <param name="builder">
+            The <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </param>
+            <param name="name">
+            The filter convention name.
+            </param>
+            <typeparam name="TConvention">
+            The concrete filter convention type.
+            </typeparam>
+            <returns>
+            Returns the <see cref="T:HotChocolate.Execution.Configuration.IRequestExecutorBuilder"/>.
+            </returns>
+        </member>
+    </members>
+</doc>

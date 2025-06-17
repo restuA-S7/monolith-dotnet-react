@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>HotChocolate</id>
+    <version>12.18.0</version>
+    <authors>ChilliCream authors and contributors</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>hotchocolate-signet.png</icon>
+    <projectUrl>https://chillicream.com/</projectUrl>
+    <description>Contains the Hot Chocolate GraphQL query execution engine and query validation.</description>
+    <releaseNotes>Release notes: https://github.com/ChilliCream/hotchocolate/releases/</releaseNotes>
+    <copyright>Copyright © 2021 ChilliCream Inc.</copyright>
+    <tags>GraphQL ChilliCream</tags>
+    <repository type="GitHub" url="https://github.com/ChilliCream/hotchocolate.git" commit="aaa38546de102b1dee1bcbdd3c8dc626e77caed6" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="HotChocolate.Execution" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Fetching" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Subscriptions.InMemory" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.CursorPagination" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.Mutations" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.OffsetPagination" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Validation" version="12.18.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net5.0">
+        <dependency id="HotChocolate.Execution" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Fetching" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Subscriptions.InMemory" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.CursorPagination" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.Mutations" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.OffsetPagination" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Validation" version="12.18.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0">
+        <dependency id="HotChocolate.Execution" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Fetching" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Subscriptions.InMemory" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.CursorPagination" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.Mutations" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.OffsetPagination" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Validation" version="12.18.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="HotChocolate.Execution" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Fetching" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Subscriptions.InMemory" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.CursorPagination" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.Mutations" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types.OffsetPagination" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Types" version="12.18.0" exclude="Build,Analyzers" />
+        <dependency id="HotChocolate.Validation" version="12.18.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

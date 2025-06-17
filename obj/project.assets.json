@@ -2113,7 +2113,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rtirestu3456\\.nuget\\packages\\": {},
+    "C:\\Users\\rtirestu3456\\Documents\\AppTesting\\MyApp\\.nuget\\packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -2122,13 +2122,14 @@
       "projectUniqueName": "C:\\Users\\rtirestu3456\\Documents\\AppTesting\\MyApp\\MyApp.csproj",
       "projectName": "MyApp",
       "projectPath": "C:\\Users\\rtirestu3456\\Documents\\AppTesting\\MyApp\\MyApp.csproj",
-      "packagesPath": "C:\\Users\\rtirestu3456\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\rtirestu3456\\Documents\\AppTesting\\MyApp\\.nuget\\packages",
       "outputPath": "C:\\Users\\rtirestu3456\\Documents\\AppTesting\\MyApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+        "C:\\Users\\rtirestu3456\\Documents\\AppTesting\\MyApp\\NuGet.Config",
         "C:\\Users\\rtirestu3456\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
