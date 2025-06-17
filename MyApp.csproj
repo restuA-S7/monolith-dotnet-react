@@ -7,18 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate.AspNetCore" Version="15.1.5" />
-    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="15.1.5" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.6">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    <!-- <PackageReference Include="HotChocolate.AspNetCore" Version="15.1.5" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="15.1.5" /> -->
+    
+    <PackageReference Include="HotChocolate.AspNetCore" Version="12.17.4" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="12.17.4" />
+    <PackageReference Include="GreenDonut" Version="12.17.4" />
+
+
+    <!-- Ganti semua package EF Core dan OpenAPI ke versi 6.x -->
+    <!-- <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="6.0.15" /> -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.25">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.6">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.25">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.10" />
   </ItemGroup>
 
 </Project>

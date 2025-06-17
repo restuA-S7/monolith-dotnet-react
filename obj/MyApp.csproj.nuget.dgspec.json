@@ -50,33 +50,31 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "GreenDonut": {
+              "target": "Package",
+              "version": "[12.17.4, )"
+            },
             "HotChocolate.AspNetCore": {
               "target": "Package",
-              "version": "[15.1.5, )"
+              "version": "[12.17.4, )"
             },
             "HotChocolate.Data.EntityFramework": {
               "target": "Package",
-              "version": "[15.1.5, )"
-            },
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[12.17.4, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.6, )"
+              "version": "[6.0.25, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.6, )"
+              "version": "[6.0.25, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[6.0.10, )"
             }
           },
           "imports": [
